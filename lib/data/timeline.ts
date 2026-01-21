@@ -83,7 +83,7 @@ export const defaultTimelineData: TimelinePhase[] = [
     title: "Scaled Impact & Systems Building",
     subtitle: "DAYS 61-90",
     color: "phase-90",
-    target: "$XXK+ GMV Growth Driven",
+    target: "Portfolio GMV Growth [Target TBD]",
     items: [
       {
         title: "Deliver measurable portfolio GMV impact",

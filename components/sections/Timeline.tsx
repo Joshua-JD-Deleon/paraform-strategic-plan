@@ -29,7 +29,7 @@ export function Timeline() {
   };
 
   return (
-    <section ref={sectionRef} className="py-6 md:py-10">
+    <section ref={sectionRef} className="py-8 md:py-12">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="mx-auto max-w-[1200px]">
           {/* Section Header */}
@@ -84,9 +84,9 @@ export function Timeline() {
                   className="relative"
                 >
                   <Card className={`h-full border transition-all duration-300 shadow-sm bg-white cursor-pointer ${
-                    isExpanded ? 'border-blue-400 shadow-lg' : 'border-slate-200/50 hover:border-blue-300'
+                    isExpanded ? 'border-[#5074F6] shadow-lg' : 'border-slate-200/50 hover:border-[#5074F6]/50'
                   }`}>
-                    <CardHeader className="pb-2">
+                    <CardHeader className="p-6">
                       <div className="flex items-center justify-between">
                         <Badge variant="secondary" className="w-fit text-xs bg-slate-100 text-slate-700 border-slate-200 font-semibold">
                           {phase.subtitle}
@@ -95,7 +95,7 @@ export function Timeline() {
                           animate={{ rotate: isExpanded ? 180 : 0 }}
                           transition={{ duration: 0.2 }}
                         >
-                          <ChevronDown className={`h-4 w-4 transition-colors ${isExpanded ? 'text-blue-500' : 'text-slate-400'}`} />
+                          <ChevronDown className={`h-4 w-4 transition-colors ${isExpanded ? 'text-[#5074F6]' : 'text-slate-400'}`} />
                         </motion.div>
                       </div>
                       <CardTitle className="text-lg md:text-xl text-stone-900 mt-2">
@@ -119,14 +119,14 @@ export function Timeline() {
                         isExpanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                       }`}
                     >
-                      <CardContent className="pt-2 pb-4">
+                      <CardContent className="px-6 pt-0 pb-6">
                         <ul className="space-y-3">
                           {phase.items.map((item, itemIndex) => (
                             <li
                               key={itemIndex}
                               className="flex items-start gap-3"
                             >
-                              <CheckCircle2 className="h-4 w-4 mt-0.5 flex-shrink-0 text-blue-500" />
+                              <CheckCircle2 className="h-4 w-4 mt-0.5 flex-shrink-0 text-[#5074F6]" />
                               <div>
                                 <p className="font-medium text-sm text-stone-900">
                                   {item.title}

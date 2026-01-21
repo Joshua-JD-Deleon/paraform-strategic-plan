@@ -67,7 +67,7 @@ export function SalesMethodology() {
   };
 
   return (
-    <section ref={sectionRef} className="py-6 md:py-10">
+    <section ref={sectionRef} className="py-8 md:py-12">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="mx-auto max-w-[1200px]">
           {/* Section Header */}
@@ -115,8 +115,8 @@ export function SalesMethodology() {
                 variants={cardVariants}
                 transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
               >
-                <Card className="h-full group shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-200/50 hover:border-slate-400 bg-white">
-                  <CardContent className="pt-6">
+                <Card className="h-full group shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-200/50 hover:border-[#5074F6]/50 bg-white">
+                  <CardContent className="p-6">
                     <div className="flex items-start gap-4">
                       <div className="p-2.5 md:p-3 rounded-xl bg-gradient-to-br from-slate-600 to-slate-700 shadow-lg shadow-slate-500/20">
                         <method.icon className="h-5 w-5 md:h-6 md:w-6 text-white" />
@@ -146,10 +146,10 @@ export function SalesMethodology() {
             transition={{ duration: 0.4, delay: 0.3 }}
             className="mt-6 text-center"
           >
-            <Card className="inline-block shadow-sm border border-slate-200/50 bg-gradient-to-r from-slate-50 to-stone-50 rounded-2xl">
-              <CardContent className="py-4 px-6">
+            <Card className="inline-block shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-200/50 hover:border-[#5074F6]/50 bg-gradient-to-r from-slate-50 to-stone-50 rounded-2xl">
+              <CardContent className="p-6">
                 <p className="text-xs md:text-sm text-stone-700">
-                  <span className="font-semibold text-blue-600">Account Management Standard:</span>{" "}
+                  <span className="font-semibold text-[#5074F6]">Account Management Standard:</span>{" "}
                   Recruiter success ownership | GMV growth execution | Operational excellence builder
                 </p>
               </CardContent>

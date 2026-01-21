@@ -1,4 +1,3 @@
-import { Navigation } from "@/components/sections/Navigation";
 import { Hero } from "@/components/sections/Hero";
 import { ExecutiveOverview } from "@/components/sections/ExecutiveOverview";
 import { Timeline } from "@/components/sections/Timeline";
@@ -12,8 +11,7 @@ import { Footer } from "@/components/sections/Footer";
 export default function Home() {
   return (
     <>
-      <Navigation />
-      <main className="min-h-screen pt-16">
+      <main className="min-h-screen pt-14">
         <Hero />
         <div className="bg-stone-50">
           <ExecutiveOverview />

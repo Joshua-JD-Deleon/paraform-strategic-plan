@@ -11,11 +11,11 @@ const icpData = [
     sections: [
       {
         label: "AGENCY CHARACTERISTICS",
-        content: "Boutique to mid-size agencies (5-50 recruiters) with tech/startup focus. Strong placement track records seeking incremental deal flow without upfront costs.",
+        content: "Boutique to mid-size agencies (5-50 recruiters) with tech focus. Strong placement records seeking deal flow without upfront costs.",
       },
       {
         label: "RECRUITER ATTRIBUTES",
-        content: "Experienced tech recruiters (3+ years), specialized in engineering, GTM, or executive roles. High performers seeking premium bounties and flexible working arrangements.",
+        content: "Experienced tech recruiters (3+ years) in engineering, GTM, or executive roles. High performers seeking premium bounties and flexibility.",
       },
     ],
   },
@@ -24,11 +24,11 @@ const icpData = [
     sections: [
       {
         label: "COMPANY STAGE & SIZE",
-        content: "Series A to Growth-stage startups ($10M-$500M). High-volume hiring (20+ roles/year) with urgency. Scaling engineering, sales, or ops teams rapidly.",
+        content: "Series A to Growth-stage startups ($10M-$500M). High-volume hiring (20+ roles/year). Scaling engineering, sales, or ops rapidly.",
       },
       {
         label: "HIRING CHALLENGES",
-        content: "Competing for top talent against FAANG. Need specialized recruiters without long-term agency contracts. Value speed-to-hire and quality over traditional agency models.",
+        content: "Competing for talent against FAANG. Need specialized recruiters without long-term contracts. Value speed and quality over traditional models.",
       },
     ],
   },
@@ -37,11 +37,11 @@ const icpData = [
     sections: [
       {
         label: "RECRUITER SIGNALS",
-        content: "Agency expansion, new practice areas launching, seeking passive income streams, dissatisfaction with traditional splits, interest in startup/tech specialization.",
+        content: "Agency expansion, new practice areas, seeking passive income, dissatisfaction with traditional splits, interest in tech specialization.",
       },
       {
         label: "COMPANY SIGNALS",
-        content: "Recent funding rounds, headcount goals announced, job postings increasing, internal recruiting team stretched, executive hiring needs emerging.",
+        content: "Recent funding, headcount goals announced, job postings increasing, internal recruiting stretched, executive hiring needs.",
       },
     ],
   },
@@ -50,11 +50,11 @@ const icpData = [
     sections: [
       {
         label: "RECRUITER VALUE",
-        content: "3-5x higher earnings per placement vs traditional splits. Free tools and platform access. Curated job flow without BD overhead. Flexible, bounty-based model.",
+        content: "3-5x higher earnings vs traditional splits. Free tools and platform. Curated job flow without BD overhead. Flexible bounty model.",
       },
       {
         label: "COMPANY VALUE",
-        content: "70%+ interview rate from vetted candidates. 3x faster time-to-hire. Pay only for results (listing + success fee). Access to specialized recruiter network.",
+        content: "70%+ interview rate from vetted candidates. 3x faster time-to-hire. Pay only for results. Access specialized recruiter network.",
       },
     ],
   },
@@ -65,7 +65,7 @@ export function ICP() {
   const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
 
   return (
-    <section ref={sectionRef} className="py-6 md:py-10">
+    <section ref={sectionRef} className="py-8 md:py-12">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="mx-auto max-w-[1200px]">
           {/* Section Header */}
@@ -114,8 +114,8 @@ export function ICP() {
                 }}
               >
                 <div>
-                  <Card className="h-full group shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-200/50 hover:border-slate-400 bg-white">
-                    <CardHeader>
+                  <Card className="h-full group shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-200/50 hover:border-[#5074F6]/50 bg-white">
+                    <CardHeader className="p-6">
                       <div className="flex items-center gap-2 mb-3">
                         <motion.div
                           className="h-1 w-12 bg-gradient-to-r from-slate-500 to-slate-600 rounded-full"
@@ -129,7 +129,7 @@ export function ICP() {
                         {card.title}
                       </CardTitle>
                     </CardHeader>
-                    <CardContent className="space-y-4">
+                    <CardContent className="px-6 pt-0 pb-6 space-y-4">
                       {card.sections.map((section, sectionIndex) => (
                         <motion.div
                           key={sectionIndex}

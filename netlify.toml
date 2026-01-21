@@ -2,9 +2,11 @@
   command = "npm run build"
   publish = "out"
 
-# Production (main branch) - include all pages
+# Production (main branch) - show all pages
 [context.production]
   command = "npm run build"
+  [context.production.environment]
+    NEXT_PUBLIC_SHOW_MY_APPROACH = "true"
 
 # Branch deploys (interview-prep) - include everything
 [context.branch-deploy]

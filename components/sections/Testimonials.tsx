@@ -5,7 +5,7 @@ import { testimonials } from "@/lib/data/testimonials";
 
 export function Testimonials() {
   return (
-    <section className="relative py-6 md:py-10">
+    <section className="relative py-8 md:py-12">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="mx-auto max-w-[1200px] text-center mb-4 md:mb-6">
           <div className="inline-flex items-center gap-2 rounded-full bg-blue-100 px-4 py-1.5 text-sm font-medium text-blue-700 mb-4">

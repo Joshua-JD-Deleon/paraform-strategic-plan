@@ -36,7 +36,7 @@ export function FrameworkShowcase() {
   ];
 
   return (
-    <section ref={sectionRef} className="py-6 md:py-10">
+    <section ref={sectionRef} className="py-8 md:py-12">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="mx-auto max-w-[1200px]">
           {/* Section Header */}
@@ -87,13 +87,13 @@ export function FrameworkShowcase() {
                 <Card
                   className={`group cursor-pointer transition-all duration-300 border bg-white ${
                     expandedSection === section.id
-                      ? "border-blue-400 shadow-lg"
-                      : "border-slate-200/50 hover:border-blue-300 shadow-sm"
+                      ? "border-[#5074F6] shadow-lg"
+                      : "border-slate-200/50 hover:border-[#5074F6]/50 shadow-sm"
                   }`}
                   onMouseEnter={() => setExpandedSection(section.id)}
                   onMouseLeave={() => setExpandedSection(null)}
                 >
-                  <CardHeader className="pb-4">
+                  <CardHeader className="p-6">
                     <div className="flex items-start gap-4">
                       <motion.div
                         className={`flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-slate-600 to-slate-700 text-white font-bold text-sm shadow-lg shrink-0 ${
@@ -128,7 +128,7 @@ export function FrameworkShowcase() {
                         className="shrink-0"
                       >
                         <ChevronDown className={`h-6 w-6 transition-colors ${
-                          expandedSection === section.id ? 'text-blue-500' : 'text-slate-400'
+                          expandedSection === section.id ? 'text-[#5074F6]' : 'text-slate-400'
                         }`} />
                       </motion.div>
                     </div>
@@ -142,7 +142,7 @@ export function FrameworkShowcase() {
                         transition={{ duration: 0.3, ease: "easeInOut" }}
                         className="overflow-hidden"
                       >
-                        <CardContent className="pt-0 pb-4">
+                        <CardContent className="px-6 pt-0 pb-6">
                           <div className="grid grid-cols-1 gap-3">
                             {section.steps.map((step: FrameworkStep, stepIndex: number) => (
                               <motion.div

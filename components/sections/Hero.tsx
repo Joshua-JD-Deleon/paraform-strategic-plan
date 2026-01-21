@@ -9,7 +9,7 @@ export function Hero() {
   const prefersReducedMotion = useReducedMotion();
 
   return (
-    <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 overflow-hidden">
+    <section className="relative bg-gradient-to-br from-[#1A1A1A] via-slate-900 to-[#1A1A1A] overflow-hidden">
       {/* Animated background pattern */}
       <motion.div
         className="absolute inset-0 bg-grid-white/[0.02] bg-[size:50px_50px]"
@@ -35,7 +35,7 @@ export function Hero() {
       {!prefersReducedMotion && (
         <>
           <motion.div
-            className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"
+            className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#5074F6]/10 rounded-full blur-3xl"
             animate={{
               scale: [1, 1.2, 1],
               opacity: [0.3, 0.5, 0.3],

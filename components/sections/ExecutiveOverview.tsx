@@ -9,7 +9,7 @@ export function ExecutiveOverview() {
   const isInView = useInView(sectionRef, { once: true, amount: 0.3 });
 
   return (
-    <section ref={sectionRef} className="py-6 md:py-10">
+    <section ref={sectionRef} className="py-8 md:py-12">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="mx-auto max-w-[1200px]">
           {/* Section Header */}
@@ -50,8 +50,8 @@ export function ExecutiveOverview() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            <Card className="shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-200/50 hover:border-slate-400 bg-white rounded-2xl">
-              <CardContent className="pt-6 pb-6">
+            <Card className="shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-200/50 hover:border-[#5074F6]/50 bg-white rounded-2xl">
+              <CardContent className="p-6">
                 <div className="space-y-4">
                   {/* Main Value Proposition */}
                   <motion.div
@@ -74,7 +74,7 @@ export function ExecutiveOverview() {
                   >
                     <p className="text-xs font-semibold text-slate-600 uppercase tracking-wide mb-2">Why Paraform</p>
                     <p className="text-sm md:text-base text-stone-700 leading-relaxed">
-                      Marketplace dynamics + relationship building + revenue impact = ideal opportunity to drive measurable GMV growth. Paraform's two-sided model aligns with my experience building enterprise relationships and scaling cold-start markets. Excited to help recruiters succeed and accelerate marketplace liquidity.
+                      Marketplace dynamics + relationship building + revenue impact = ideal opportunity to drive GMV growth. Paraform's two-sided model aligns with my experience building enterprise relationships and scaling cold-start markets. Excited to help recruiters succeed and drive marketplace liquidity.
                     </p>
                   </motion.div>
 
@@ -86,7 +86,7 @@ export function ExecutiveOverview() {
                     transition={{ duration: 0.4, delay: 0.9 }}
                   >
                     <p className="text-xs md:text-sm text-stone-500 italic">
-                      This briefing provides a high-level overview for interview discussions. Final strategy will be collaboratively developed during onboarding based on organizational priorities.
+                      This briefing provides a high-level overview for interview discussions. Final strategy will be developed during onboarding based on priorities.
                     </p>
                   </motion.div>
                 </div>
