@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Target, Sparkles, Mail } from "lucide-react";
+import { Target, Sparkles, Mail, FileText } from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -21,6 +21,7 @@ export function Navigation() {
   const isHomePage = pathname === "/";
   const isCaseStudy = pathname === "/case-study";
   const isInterviewFollowUp = pathname === "/interview-follow-up";
+  const isPrep = pathname?.startsWith("/prep");
   useEffect(() => {
     if (!isHomePage) return;
 
@@ -109,6 +110,20 @@ export function Navigation() {
               <Link href="/interview-follow-up" className="flex items-center gap-1">
                 <Mail className="h-3 w-3" />
                 <span className="hidden sm:inline">My Approach</span>
+              </Link>
+            </Button>
+            <Button
+              asChild
+              size="sm"
+              className={`h-7 px-2 text-xs ${
+                isPrep
+                  ? "bg-blue-600 text-white hover:bg-blue-500"
+                  : "bg-transparent text-slate-300 hover:text-white hover:bg-slate-800"
+              }`}
+            >
+              <Link href="/prep" className="flex items-center gap-1">
+                <FileText className="h-3 w-3" />
+                <span className="hidden sm:inline">Interview Prep</span>
               </Link>
             </Button>
           </motion.div>

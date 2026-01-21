@@ -113,12 +113,14 @@ export function Hero() {
                 href: "https://linkedin.com/in/jd-gtm",
                 icon: Linkedin,
                 label: "LinkedIn",
+                shortLabel: "LinkedIn",
                 external: true
               },
               {
                 href: "tel:+12099476557",
                 icon: Phone,
-                label: "209-947-6557"
+                label: "209-947-6557",
+                shortLabel: "Call"
               }
             ].map((contact, index) => (
               <motion.div
@@ -128,22 +130,20 @@ export function Hero() {
                   visible: { opacity: 1, y: 0 }
                 }}
               >
-                <Button
-                  asChild
-                  size="sm"
-                  variant="secondary"
-                  className="bg-white/10 text-white hover:bg-white/20 border border-white/20 backdrop-blur-sm transition-all font-semibold"
+                <a
+                  href={contact.href}
+                  {...(contact.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                 >
-                  <a
-                    href={contact.href}
-                    {...(contact.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                    className="flex items-center gap-2"
+                  <Button
+                    size="sm"
+                    variant="secondary"
+                    className="bg-white/10 text-white hover:bg-white/20 border border-white/20 backdrop-blur-sm transition-all font-semibold"
                   >
                     <contact.icon className="h-4 w-4" />
-                    <span className="hidden sm:inline">{contact.label}</span>
-                    {contact.shortLabel && <span className="sm:hidden">{contact.shortLabel}</span>}
-                  </a>
-                </Button>
+                    <span className="hidden sm:inline ml-2">{contact.label}</span>
+                    <span className="sm:hidden ml-2">{contact.shortLabel}</span>
+                  </Button>
+                </a>
               </motion.div>
             ))}
           </motion.div>
