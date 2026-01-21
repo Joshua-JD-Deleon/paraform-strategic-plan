@@ -103,7 +103,7 @@ export default function MyApproachPage() {
                 transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
               >
                 <span className="bg-gradient-to-r from-white via-blue-100 to-blue-200 bg-clip-text text-transparent">
-                  Playbook Highlights
+                  Partner Playbook
                 </span>
               </motion.h1>
               <motion.p
