@@ -86,7 +86,7 @@ export function ExecutiveOverview() {
                     transition={{ duration: 0.4, delay: 0.9 }}
                   >
                     <p className="text-xs md:text-sm text-stone-500 italic">
-                      This briefing provides a high-level overview for interview discussions. Final strategy will be developed during onboarding based on priorities.
+                      This document demonstrates my strategic approach for interview discussions. Final strategies and priorities would be developed collaboratively during onboarding.
                     </p>
                   </motion.div>
                 </div>

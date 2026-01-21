@@ -194,6 +194,101 @@ const experimentIdeas = [
   { title: "Priority Role Access", description: "Top performers get first look at new roles", metric: "Fill rate on hard roles", effort: "High" },
 ];
 
+function ExecutiveOverviewSection() {
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: true, amount: 0.3 });
+
+  return (
+    <section ref={sectionRef} className="py-8 md:py-12 bg-stone-50">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8">
+        <div className="mx-auto max-w-[1200px]">
+          {/* Section Header */}
+          <div className="mb-4 md:mb-6 text-center">
+            <motion.div
+              className="inline-flex items-center gap-2 rounded-full bg-blue-100 px-4 py-1.5 text-sm font-medium text-blue-700 mb-4"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={isInView ? { opacity: 1, scale: 1 } : {}}
+              transition={{ duration: 0.3, ease: "backOut" }}
+            >
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-500 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+              </span>
+              Strategic Summary
+            </motion.div>
+            <motion.h2
+              className="text-3xl font-bold text-stone-900 md:text-4xl lg:text-5xl mb-2"
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.4, delay: 0.1, ease: [0.25, 0.1, 0.25, 1] }}
+            >
+              Executive Overview
+            </motion.h2>
+            <motion.p
+              className="text-base md:text-lg text-stone-600"
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.4, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
+            >
+              Sample partner acquisition strategy for recruiting agency portfolio
+            </motion.p>
+          </div>
+
+          {/* Content Card */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
+          >
+            <Card className="shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-200/50 hover:border-[#5074F6]/50 bg-white rounded-2xl">
+              <CardContent className="p-6">
+                <div className="space-y-4">
+                  {/* Main Value Proposition */}
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={isInView ? { opacity: 1 } : {}}
+                    transition={{ duration: 0.6, delay: 0.5 }}
+                  >
+                    <p className="text-xs font-semibold text-slate-600 uppercase tracking-wide mb-2">Strategy Purpose</p>
+                    <p className="text-sm md:text-base text-stone-700 leading-relaxed">
+                      This document outlines a sample approach to building a high-quality portfolio of recruiting partners for Paraform's marketplace. It includes target account selection criteria, management frameworks for different partner tiers, and marketplace experiments to drive liquidity and retention.
+                    </p>
+                  </motion.div>
+
+                  {/* Approach */}
+                  <motion.div
+                    className="pt-4"
+                    initial={{ opacity: 0 }}
+                    animate={isInView ? { opacity: 1 } : {}}
+                    transition={{ duration: 0.5, delay: 0.7 }}
+                  >
+                    <p className="text-xs font-semibold text-slate-600 uppercase tracking-wide mb-2">Partner Management Philosophy</p>
+                    <p className="text-sm md:text-base text-stone-700 leading-relaxed">
+                      Treat recruiters like entrepreneurs, not vendors. Fast time-to-first-placement drives retention. Data-informed engagement with tiered touch models. Build scalable systems over individual heroics. Surface ops insights to product for continuous improvement.
+                    </p>
+                  </motion.div>
+
+                  {/* Disclaimer */}
+                  <motion.div
+                    className="pt-4"
+                    initial={{ opacity: 0 }}
+                    animate={isInView ? { opacity: 1 } : {}}
+                    transition={{ duration: 0.4, delay: 0.9 }}
+                  >
+                    <p className="text-xs md:text-sm text-stone-500 italic">
+                      This document demonstrates my strategic approach for interview discussions. Final strategies and priorities would be developed collaboratively during onboarding.
+                    </p>
+                  </motion.div>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function HeroSection() {
   const prefersReducedMotion = useReducedMotion();
 
@@ -768,6 +863,7 @@ export default function CaseStudyPage() {
     <>
       <main className="min-h-screen pt-14">
         <HeroSection />
+        <ExecutiveOverviewSection />
         <PhilosophySection />
         <MetricsSection />
         <AccountsSection />

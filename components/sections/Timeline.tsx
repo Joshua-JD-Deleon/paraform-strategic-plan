@@ -116,7 +116,7 @@ export function Timeline() {
                     {/* Expandable Content */}
                     <div
                       className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                        isExpanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                        isExpanded ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'
                       }`}
                     >
                       <CardContent className="px-6 pt-0 pb-6">

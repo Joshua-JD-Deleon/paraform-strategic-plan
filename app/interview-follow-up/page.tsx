@@ -3,8 +3,9 @@
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useReducedMotion } from "@/lib/hooks/useReducedMotion";
+import { useRef } from "react";
 import {
   CheckCircle2,
   Clock,
@@ -26,19 +27,114 @@ import {
   Linkedin,
   Phone,
 } from "lucide-react";
-import { useState } from "react";
 
-// Tab configuration - focused on Supply-Side Account Management
-const tabs = [
-  { id: "onboarding", label: "Partner Onboarding", icon: Handshake },
-  { id: "success", label: "Partner Success", icon: TrendingUp },
-  { id: "retention", label: "Retention & Growth", icon: RefreshCw },
-  { id: "marketplace", label: "Marketplace Ops", icon: Settings },
-];
+function ExecutiveOverviewSection() {
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: true, amount: 0.3 });
+
+  return (
+    <section ref={sectionRef} className="py-8 md:py-12 bg-stone-50">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8">
+        <div className="mx-auto max-w-[1200px]">
+          {/* Section Header */}
+          <div className="mb-4 md:mb-6 text-center">
+            <motion.div
+              className="inline-flex items-center gap-2 rounded-full bg-blue-100 px-4 py-1.5 text-sm font-medium text-blue-700 mb-4"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={isInView ? { opacity: 1, scale: 1 } : {}}
+              transition={{ duration: 0.3, ease: "backOut" }}
+            >
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-500 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+              </span>
+              Strategic Summary
+            </motion.div>
+            <motion.h2
+              className="text-3xl font-bold text-stone-900 md:text-4xl lg:text-5xl mb-2"
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.4, delay: 0.1, ease: [0.25, 0.1, 0.25, 1] }}
+            >
+              Executive Overview
+            </motion.h2>
+            <motion.p
+              className="text-base md:text-lg text-stone-600"
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.4, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
+            >
+              Comprehensive partner management framework for supply-side operations
+            </motion.p>
+          </div>
+
+          {/* Content Card */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
+          >
+            <Card className="shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-200/50 hover:border-[#5074F6]/50 bg-white rounded-2xl">
+              <CardContent className="p-6">
+                <div className="space-y-4">
+                  {/* Main Value Proposition */}
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={isInView ? { opacity: 1 } : {}}
+                    transition={{ duration: 0.6, delay: 0.5 }}
+                  >
+                    <p className="text-xs font-semibold text-slate-600 uppercase tracking-wide mb-2">Playbook Purpose</p>
+                    <p className="text-sm md:text-base text-stone-700 leading-relaxed">
+                      This playbook provides a comprehensive framework for managing Paraform's recruiting partners throughout their lifecycle. It covers partner onboarding to drive fast time-to-first-placement, ongoing success management with tiered engagement, retention strategies with churn prevention, and marketplace operations to improve liquidity.
+                    </p>
+                  </motion.div>
+
+                  {/* Key Approach */}
+                  <motion.div
+                    className="pt-4"
+                    initial={{ opacity: 0 }}
+                    animate={isInView ? { opacity: 1 } : {}}
+                    transition={{ duration: 0.5, delay: 0.7 }}
+                  >
+                    <p className="text-xs font-semibold text-slate-600 uppercase tracking-wide mb-2">My Partner Management Philosophy</p>
+                    <p className="text-sm md:text-base text-stone-700 leading-relaxed">
+                      Treat recruiters like entrepreneurs, not vendors. Fast time-to-first-placement drives retention. Data-informed engagement with tiered touch models. Build scalable systems over individual heroics. Surface ops insights to product for continuous improvement.
+                    </p>
+                  </motion.div>
+
+                  {/* Disclaimer */}
+                  <motion.div
+                    className="pt-4"
+                    initial={{ opacity: 0 }}
+                    animate={isInView ? { opacity: 1 } : {}}
+                    transition={{ duration: 0.4, delay: 0.9 }}
+                  >
+                    <p className="text-xs md:text-sm text-stone-500 italic">
+                      This document demonstrates my strategic approach for interview discussions. Final strategies and priorities would be developed collaboratively during onboarding.
+                    </p>
+                  </motion.div>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 export default function MyApproachPage() {
-  const [activeTab, setActiveTab] = useState("onboarding");
   const prefersReducedMotion = useReducedMotion();
+
+  const onboardingRef = useRef(null);
+  const successRef = useRef(null);
+  const retentionRef = useRef(null);
+  const marketplaceRef = useRef(null);
+
+  const onboardingInView = useInView(onboardingRef, { once: true, amount: 0.1 });
+  const successInView = useInView(successRef, { once: true, amount: 0.1 });
+  const retentionInView = useInView(retentionRef, { once: true, amount: 0.1 });
+  const marketplaceInView = useInView(marketplaceRef, { once: true, amount: 0.1 });
 
   return (
     <>
@@ -164,35 +260,34 @@ export default function MyApproachPage() {
           </div>
         </section>
 
+        {/* Executive Overview Section */}
+        <ExecutiveOverviewSection />
+
         {/* Content Section */}
-        <section className="bg-stone-50 py-8 md:py-12">
+        <section className="bg-white py-8 md:py-12">
           <div className="container mx-auto px-4 md:px-6 lg:px-8">
             <div className="mx-auto max-w-[1200px]">
-              {/* Tab Navigation */}
-              <div className="flex flex-wrap justify-center gap-3 mb-8">
-                {tabs.map((tab) => {
-                  const Icon = tab.icon;
-                  return (
-                    <button
-                      key={tab.id}
-                      onClick={() => setActiveTab(tab.id)}
-                      className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium text-sm transition-all duration-200 ${
-                        activeTab === tab.id
-                          ? "bg-[#5074F6] text-white shadow-md"
-                          : "text-slate-600 border border-slate-200 bg-white hover:border-[#5074F6]/50 hover:text-[#5074F6]"
-                      }`}
-                    >
-                      <Icon className="h-4 w-4" />
-                      {tab.label}
-                    </button>
-                  );
-                })}
-              </div>
 
-              {/* Partner Onboarding Tab */}
-              {activeTab === "onboarding" && (
-                <div className="space-y-6">
-                  {/* Onboarding Philosophy */}
+              {/* Partner Onboarding Section */}
+              <section id="onboarding" ref={onboardingRef} className="space-y-6 mb-12">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={onboardingInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.4 }}
+                  className="text-center mb-6"
+                >
+                  <div className="inline-flex items-center gap-2 rounded-full bg-blue-100 px-4 py-1.5 text-sm font-medium text-blue-700 mb-4">
+                    <Handshake className="h-4 w-4" />
+                    Partner Onboarding
+                  </div>
+                </motion.div>
+
+                {/* Onboarding Philosophy */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={onboardingInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.4, delay: 0.1 }}
+                >
                   <Card className="shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-200/50 hover:border-[#5074F6]/50 bg-white">
                     <CardHeader>
                       <div className="flex items-center gap-3">
@@ -224,8 +319,14 @@ export default function MyApproachPage() {
                       </div>
                     </CardContent>
                   </Card>
+                </motion.div>
 
-                  {/* Onboarding Checklist */}
+                {/* Onboarding Checklist */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={onboardingInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.4, delay: 0.2 }}
+                >
                   <Card className="shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-200/50 hover:border-[#5074F6]/50 bg-white">
                     <CardHeader>
                       <div className="flex items-center gap-3">
@@ -297,8 +398,14 @@ export default function MyApproachPage() {
                       </div>
                     </CardContent>
                   </Card>
+                </motion.div>
 
-                  {/* Red Flags During Onboarding */}
+                {/* Red Flags During Onboarding */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={onboardingInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.4, delay: 0.3 }}
+                >
                   <Card className="shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-200/50 hover:border-[#5074F6]/50 bg-white">
                     <CardHeader>
                       <div className="flex items-center gap-3">
@@ -342,13 +449,29 @@ export default function MyApproachPage() {
                       </div>
                     </CardContent>
                   </Card>
-                </div>
-              )}
+                </motion.div>
+              </section>
 
-              {/* Partner Success Tab */}
-              {activeTab === "success" && (
-                <div className="space-y-6">
-                  {/* Success Framework */}
+              {/* Partner Success Section */}
+              <section id="success" ref={successRef} className="space-y-6 mb-12">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={successInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.4 }}
+                  className="text-center mb-6"
+                >
+                  <div className="inline-flex items-center gap-2 rounded-full bg-blue-100 px-4 py-1.5 text-sm font-medium text-blue-700 mb-4">
+                    <TrendingUp className="h-4 w-4" />
+                    Partner Success
+                  </div>
+                </motion.div>
+
+                {/* Success Framework */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={successInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.4, delay: 0.1 }}
+                >
                   <Card className="shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-200/50 hover:border-[#5074F6]/50 bg-white">
                     <CardHeader>
                       <div className="flex items-center gap-3">
@@ -404,8 +527,14 @@ export default function MyApproachPage() {
                       </div>
                     </CardContent>
                   </Card>
+                </motion.div>
 
-                  {/* QBR Structure */}
+                {/* QBR Structure */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={successInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.4, delay: 0.2 }}
+                >
                   <Card className="shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-200/50 hover:border-[#5074F6]/50 bg-white">
                     <CardHeader>
                       <div className="flex items-center gap-3">
@@ -439,8 +568,14 @@ export default function MyApproachPage() {
                       </div>
                     </CardContent>
                   </Card>
+                </motion.div>
 
-                  {/* Tiered Support Model */}
+                {/* Tiered Support Model */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={successInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.4, delay: 0.3 }}
+                >
                   <Card className="shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-200/50 hover:border-[#5074F6]/50 bg-white">
                     <CardHeader>
                       <div className="flex items-center gap-3">
@@ -491,13 +626,29 @@ export default function MyApproachPage() {
                       </div>
                     </CardContent>
                   </Card>
-                </div>
-              )}
+                </motion.div>
+              </section>
 
-              {/* Retention & Growth Tab */}
-              {activeTab === "retention" && (
-                <div className="space-y-6">
-                  {/* Retention Metrics */}
+              {/* Retention & Growth Section */}
+              <section id="retention" ref={retentionRef} className="space-y-6 mb-12">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={retentionInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.4 }}
+                  className="text-center mb-6"
+                >
+                  <div className="inline-flex items-center gap-2 rounded-full bg-blue-100 px-4 py-1.5 text-sm font-medium text-blue-700 mb-4">
+                    <RefreshCw className="h-4 w-4" />
+                    Retention & Growth
+                  </div>
+                </motion.div>
+
+                {/* Retention Metrics */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={retentionInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.4, delay: 0.1 }}
+                >
                   <Card className="shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-200/50 hover:border-[#5074F6]/50 bg-white">
                     <CardHeader>
                       <div className="flex items-center gap-3">
@@ -527,8 +678,14 @@ export default function MyApproachPage() {
                       </div>
                     </CardContent>
                   </Card>
+                </motion.div>
 
-                  {/* Churn Prevention */}
+                {/* Churn Prevention */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={retentionInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.4, delay: 0.2 }}
+                >
                   <Card className="shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-200/50 hover:border-[#5074F6]/50 bg-white">
                     <CardHeader>
                       <div className="flex items-center gap-3">
@@ -586,8 +743,14 @@ export default function MyApproachPage() {
                       </div>
                     </CardContent>
                   </Card>
+                </motion.div>
 
-                  {/* Growth Expansion */}
+                {/* Growth Expansion */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={retentionInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.4, delay: 0.3 }}
+                >
                   <Card className="shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-200/50 hover:border-[#5074F6]/50 bg-white">
                     <CardHeader>
                       <div className="flex items-center gap-3">
@@ -619,13 +782,29 @@ export default function MyApproachPage() {
                       </div>
                     </CardContent>
                   </Card>
-                </div>
-              )}
+                </motion.div>
+              </section>
 
-              {/* Marketplace Ops Tab */}
-              {activeTab === "marketplace" && (
-                <div className="space-y-6">
-                  {/* Marketplace Thinking */}
+              {/* Marketplace Ops Section */}
+              <section id="marketplace" ref={marketplaceRef} className="space-y-6">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={marketplaceInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.4 }}
+                  className="text-center mb-6"
+                >
+                  <div className="inline-flex items-center gap-2 rounded-full bg-blue-100 px-4 py-1.5 text-sm font-medium text-blue-700 mb-4">
+                    <Settings className="h-4 w-4" />
+                    Marketplace Ops
+                  </div>
+                </motion.div>
+
+                {/* Marketplace Thinking */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={marketplaceInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.4, delay: 0.1 }}
+                >
                   <Card className="shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-200/50 hover:border-[#5074F6]/50 bg-white">
                     <CardHeader>
                       <div className="flex items-center gap-3">
@@ -661,8 +840,14 @@ export default function MyApproachPage() {
                       </div>
                     </CardContent>
                   </Card>
+                </motion.div>
 
-                  {/* Experiment Ideas */}
+                {/* Experiment Ideas */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={marketplaceInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.4, delay: 0.2 }}
+                >
                   <Card className="shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-200/50 hover:border-[#5074F6]/50 bg-white">
                     <CardHeader>
                       <div className="flex items-center gap-3">
@@ -701,8 +886,14 @@ export default function MyApproachPage() {
                       </div>
                     </CardContent>
                   </Card>
+                </motion.div>
 
-                  {/* Ops → Product Bridge */}
+                {/* Ops → Product Bridge */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={marketplaceInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.4, delay: 0.3 }}
+                >
                   <Card className="shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-200/50 hover:border-[#5074F6]/50 bg-white">
                     <CardHeader>
                       <div className="flex items-center gap-3">
@@ -747,8 +938,8 @@ export default function MyApproachPage() {
                       </div>
                     </CardContent>
                   </Card>
-                </div>
-              )}
+                </motion.div>
+              </section>
 
             </div>
           </div>

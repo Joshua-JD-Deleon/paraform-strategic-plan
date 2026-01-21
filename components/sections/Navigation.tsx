@@ -1,20 +1,34 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { Button } from "@/components/ui/button";
-import { Target, Sparkles, Mail, ChevronDown } from "lucide-react";
+import { Target, Sparkles, Mail } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-// Section navigation items for homepage
-const sectionItems = [
-  { id: "methodology", label: "Expertise" },
-  { id: "timeline", label: "30-60-90" },
-  { id: "framework", label: "Framework" },
-  { id: "icp", label: "Strategy" },
-  { id: "testimonials", label: "Recommendations" },
-];
+// Section navigation items for each page
+const pageSections: Record<string, { id: string; label: string }[]> = {
+  "/": [
+    { id: "methodology", label: "Expertise" },
+    { id: "timeline", label: "30-60-90" },
+    { id: "framework", label: "Framework" },
+    { id: "icp", label: "Strategy" },
+    { id: "testimonials", label: "Recommendations" },
+  ],
+  "/partner-strategy": [
+    { id: "philosophy", label: "Philosophy" },
+    { id: "metrics", label: "Metrics" },
+    { id: "accounts", label: "Partners" },
+    { id: "experiments", label: "Experiments" },
+  ],
+  "/interview-follow-up": [
+    { id: "onboarding", label: "Onboarding" },
+    { id: "success", label: "Success" },
+    { id: "retention", label: "Retention" },
+    { id: "marketplace", label: "Marketplace" },
+  ],
+};
 
 export function Navigation() {
   const [activeSection, setActiveSection] = useState("");
@@ -25,13 +39,23 @@ export function Navigation() {
   const isPartnerStrategy = pathname === "/partner-strategy";
   const isInterviewFollowUp = pathname === "/interview-follow-up";
 
+  // Get sections for current page
+  const currentSections = useMemo(() => pageSections[pathname] || [], [pathname]);
+  const hasSections = currentSections.length > 0;
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
 
-      if (!isHomePage) return;
+      if (!hasSections) return;
 
-      const sections = sectionItems.map((item) => document.getElementById(item.id));
+      // For interview-follow-up page, we handle tabs differently
+      if (isInterviewFollowUp) {
+        setShowSectionNav(window.scrollY > 400);
+        return;
+      }
+
+      const sections = currentSections.map((item) => document.getElementById(item.id));
       const scrollPosition = window.scrollY + 150;
 
       // Check if we're past the hero section
@@ -40,7 +64,7 @@ export function Navigation() {
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = sections[i];
         if (section && section.offsetTop <= scrollPosition) {
-          setActiveSection(sectionItems[i].id);
+          setActiveSection(currentSections[i].id);
           break;
         }
       }
@@ -49,9 +73,24 @@ export function Navigation() {
     window.addEventListener("scroll", handleScroll);
     handleScroll(); // Initial check
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [isHomePage]);
+  }, [pathname, hasSections, currentSections, isInterviewFollowUp]);
 
   const scrollToSection = (id: string) => {
+    // For interview-follow-up page, dispatch a custom event to switch tabs
+    if (isInterviewFollowUp) {
+      window.dispatchEvent(new CustomEvent("switchTab", { detail: { tabId: id } }));
+      // Also scroll to the content section
+      const contentSection = document.querySelector("section.bg-stone-50");
+      if (contentSection) {
+        const offset = 80;
+        const elementPosition = contentSection.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - offset;
+        window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+      }
+      setActiveSection(id);
+      return;
+    }
+
     const element = document.getElementById(id);
     if (element) {
       const offset = 80;
@@ -60,6 +99,18 @@ export function Navigation() {
       window.scrollTo({ top: offsetPosition, behavior: "smooth" });
     }
   };
+
+  // Listen for tab changes from the interview-follow-up page
+  useEffect(() => {
+    if (!isInterviewFollowUp) return;
+
+    const handleTabChange = (event: CustomEvent<{ tabId: string }>) => {
+      setActiveSection(event.detail.tabId);
+    };
+
+    window.addEventListener("tabChanged" as any, handleTabChange);
+    return () => window.removeEventListener("tabChanged" as any, handleTabChange);
+  }, [isInterviewFollowUp]);
 
   return (
     <>
@@ -86,9 +137,9 @@ export function Navigation() {
               </Link>
             </div>
 
-            {/* Center: Section Navigation (Homepage only, when scrolled) */}
+            {/* Center: Section Navigation (on any page with sections, when scrolled) */}
             <AnimatePresence>
-              {isHomePage && showSectionNav && (
+              {hasSections && showSectionNav && (
                 <motion.div
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -96,7 +147,7 @@ export function Navigation() {
                   transition={{ duration: 0.2 }}
                   className="hidden md:flex items-center gap-1 bg-[#1A1A1A]/50 rounded-full px-2 py-1 border border-slate-700/50"
                 >
-                  {sectionItems.map((item) => {
+                  {currentSections.map((item) => {
                     const isActive = activeSection === item.id;
                     return (
                       <button
@@ -174,14 +225,14 @@ export function Navigation() {
         </div>
 
         {/* Progress Bar */}
-        {isHomePage && (
+        {hasSections && (
           <motion.div
             className="absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-[#5074F6] to-[#3d5bd9]"
             initial={{ width: "0%" }}
             animate={{
               width: `${Math.min(
-                (sectionItems.findIndex((s) => s.id === activeSection) + 1) /
-                  sectionItems.length *
+                (currentSections.findIndex((s) => s.id === activeSection) + 1) /
+                  currentSections.length *
                   100,
                 100
               )}%`,
@@ -193,7 +244,7 @@ export function Navigation() {
 
       {/* Mobile Section Navigation (Bottom bar) */}
       <AnimatePresence>
-        {isHomePage && showSectionNav && (
+        {hasSections && showSectionNav && (
           <motion.div
             initial={{ y: 100 }}
             animate={{ y: 0 }}
@@ -203,7 +254,7 @@ export function Navigation() {
           >
             <div className="bg-[#1A1A1A]/95 backdrop-blur-lg rounded-2xl shadow-xl border border-slate-700/50 p-2">
               <div className="flex items-center justify-around">
-                {sectionItems.slice(0, 4).map((item) => {
+                {currentSections.slice(0, 4).map((item) => {
                   const isActive = activeSection === item.id;
                   return (
                     <button
