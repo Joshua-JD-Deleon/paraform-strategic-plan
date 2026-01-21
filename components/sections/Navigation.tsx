@@ -150,7 +150,7 @@ export function Navigation() {
               >
                 <Link href="/partner-strategy" className="flex items-center gap-1.5">
                   <Sparkles className="h-3.5 w-3.5" />
-                  <span className="hidden sm:inline">Partner Strategy</span>
+                  <span className="hidden sm:inline">Sample Strategy</span>
                 </Link>
               </Button>
               {process.env.NEXT_PUBLIC_SHOW_MY_APPROACH === "true" && (

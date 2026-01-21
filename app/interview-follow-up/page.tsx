@@ -103,7 +103,7 @@ export default function MyApproachPage() {
                 transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
               >
                 <span className="bg-gradient-to-r from-white via-blue-100 to-blue-200 bg-clip-text text-transparent">
-                  Playbook
+                  Playbook Highlights
                 </span>
               </motion.h1>
               <motion.p
@@ -112,7 +112,7 @@ export default function MyApproachPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
               >
-                Partner Onboarding | Success Management | Retention & Growth
+                Onboarding | Success | Retention | Marketplace Ops
               </motion.p>
 
               {/* Contact CTA pills */}
