@@ -1,0 +1,1684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0A5C6B">
+    <meta name="description" content="Strategic 30-60-90 Day Action Plan for Enterprise Account Executive at CircleCI - Joshua (JD) Deleon">
+    <meta name="author" content="Joshua (JD) Deleon">
+    <meta name="keywords" content="CI/CD, DevOps, enterprise sales, 30-60-90 day plan, CircleCI, developer productivity">
+    <meta name="robots" content="noindex, nofollow">
+    <title>30-60-90 Day Strategic Plan | CircleCI Enterprise Account Executive - Joshua Deleon</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;900&display=swap"></noscript>
+
+    <style>
+        /* VERSION 2.0 - NO BACKGROUND GRADIENTS ON HOVER */
+        :root {
+            /* === CIRCLECI BRAND COLORS === */
+            /* PRIMARY PALETTE */
+            --brand-primary: #0A5C6B;        /* Lighter Teal - CircleCI primary brand */
+            --brand-accent: #049B4A;         /* Green - CircleCI CTAs and success */
+            --brand-dark: #0A5C6B;           /* Same as primary for headers */
+            --brand-dark-secondary: #1A8799; /* Lighter Mid Teal for depth */
+            --brand-text: #374151;
+
+            /* PHASE COLORS (for 30/60/90 timeline differentiation) */
+            --phase-30-day: #0A5C6B;         /* Lighter Teal - Foundation (matches framework-icon--1) */
+            --phase-60-day: #1A8799;         /* Lighter Mid Teal - Execution (matches framework-icon--2) */
+            --phase-90-day: #049B4A;         /* Green - Strategic conversion (matches framework-icon--3) */
+
+            /* BACKGROUNDS */
+            --bg-subtle-teal: #F8FAFA;       /* Subtle teal tint for alternating sections */
+
+            /* TEXT COLORS */
+            --text-primary: #0A5C6B;         /* Lighter teal for headlines */
+            --text-link: #049B4A;            /* Green for links */
+            --text-link-hover: #037A3C;      /* Darker green on hover */
+
+            /* BORDERS */
+            --border-light: #E0E5E6;         /* Teal-tinted gray */
+            --border-accent: #049B4A;        /* Green accent borders */
+
+            /* Brand Color Aliases */
+            --deep-space: var(--brand-dark);
+
+            /* === NEUTRAL COLOR SYSTEM === */
+            --gray-950: #0F172A;
+            --gray-900: #111827;
+            --gray-800: #1F2937;
+            --gray-700: #334155;
+            --gray-600: #4B5563;
+            --gray-500: #64748B;
+            --gray-400: #9CA3AF;
+            --gray-300: #CBD5E1;
+            --gray-200: #E5E7EB;
+            --gray-100: #F1F5F9;
+            --gray-50: #F8FAFC;
+            --white: #FFFFFF;
+
+            /* === OPTIMIZED GRADIENT SYSTEM === */
+            --gradient-bg: linear-gradient(135deg, #F1F5F9 0%, #F8FAFC 100%);
+
+            /* === INTERACTIVE STATE SYSTEM === */
+            --border-hover: rgba(4, 155, 74, 0.4);
+            --border-hover-subtle: rgba(4, 155, 74, 0.25);
+
+            /* === ENHANCED SHADOW SYSTEM (TEAL-TINTED) === */
+            --shadow-sm: 0 1px 3px rgba(0, 55, 64, 0.08);
+            --shadow-md: 0 2px 8px rgba(0, 55, 64, 0.12);
+            --shadow-lg: 0 8px 24px rgba(0, 55, 64, 0.16);
+            --shadow-hover: 0 12px 32px rgba(0, 55, 64, 0.08);
+            --shadow-hover-elevated: 0 16px 40px rgba(0, 55, 64, 0.1);
+
+            /* === TYPOGRAPHY SYSTEM === */
+            --font-family-primary: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            --font-body: var(--font-family-primary);
+            --font-heading: var(--font-family-primary);
+
+            /* Font Sizes */
+            --text-xs: 0.75rem;
+            --text-sm: 0.875rem;
+            --text-base: 1rem;
+            --text-lg: 1.125rem;
+            --text-xl: 1.25rem;
+            --text-2xl: 1.5rem;
+            --text-3xl: 1.875rem;
+            --text-4xl: 2.25rem;
+            --text-xxl: 2rem;
+
+            --font-normal: 400;
+            --font-medium: 500;
+            --font-semibold: 600;
+            --font-bold: 700;
+            --font-extrabold: 800;
+
+            /* Enhanced Line Heights */
+            --leading-tight: 1.25;
+            --leading-normal: 1.5;
+            --leading-relaxed: 1.625;
+
+            /* === SPACING SYSTEM === */
+            --space-xxs: 0.25rem;
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 1.5rem;
+            --space-lg: 2rem;
+            --space-xl: 3rem;
+            --space-2xl: 4rem;
+            --space-3xl: 6rem;
+
+            /* === LAYOUT SPACING === */
+            --section-padding: var(--space-3xl);
+            --section-padding-mobile: var(--space-2xl);
+            --container-padding: var(--space-lg);
+            --container-max-width: 1200px;
+            --content-max-width: 1100px;
+
+            /* === BORDER RADIUS SYSTEM === */
+            --radius-sm: 0.25rem;
+            --radius-md: 0.375rem;
+            --radius-lg: 0.5rem;
+            --radius-xl: 0.75rem;
+            --radius-2xl: 1rem;
+
+            /* === ANIMATION SYSTEM === */
+            --motion-fast: 150ms ease-in-out;
+            --motion-default: 200ms ease-in-out;
+            --motion-slow: 300ms ease-in-out;
+            --motion-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            font-size: var(--text-base);
+            line-height: var(--leading-normal);
+            color: #374151;
+            background: var(--gradient-bg);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* === CUSTOM SCROLLBAR SYSTEM === */
+        ::-webkit-scrollbar {
+            width: 14px;
+            height: 14px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: linear-gradient(180deg, var(--gray-50) 0%, var(--gray-100) 100%);
+            border-radius: 8px;
+            border: 1px solid var(--gray-200);
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.03);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, var(--brand-dark-secondary) 0%, var(--brand-primary) 100%);
+            border-radius: var(--radius-lg);
+            border: 2px solid var(--gray-50);
+            box-shadow: 0 2px 8px rgba(0, 55, 64, 0.15), inset 0 1px 2px rgba(255, 255, 255, 0.1);
+            transition: all var(--motion-default);
+            min-height: 40px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(180deg, var(--brand-dark-secondary) 0%, var(--brand-primary) 100%);
+            border-color: var(--white);
+            box-shadow: 0 4px 12px rgba(0, 55, 64, 0.25), inset 0 1px 3px rgba(255, 255, 255, 0.15);
+            transform: scale(1.05);
+        }
+
+        ::-webkit-scrollbar-thumb:active {
+            background: linear-gradient(180deg, var(--brand-dark-secondary) 0%, var(--brand-primary) 100%);
+            border-color: var(--gray-100);
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2), 0 2px 6px rgba(0, 55, 64, 0.3);
+            transform: scale(0.98);
+        }
+
+        ::-webkit-scrollbar-corner {
+            background: var(--gray-50);
+        }
+
+        /* Firefox scrollbar */
+        html, * {
+            scrollbar-width: thin;
+            scrollbar-color: var(--brand-dark-secondary) var(--gray-100);
+        }
+
+        .container,
+        .section,
+        .grid {
+            scrollbar-width: thin;
+            scrollbar-color: var(--brand-dark-secondary) var(--gray-50);
+        }
+
+        .hero,
+        .footer {
+            scrollbar-width: thin;
+            scrollbar-color: rgba(255, 255, 255, 0.3) rgba(0, 55, 64, 0.1);
+        }
+
+        .container {
+            max-width: var(--container-max-width);
+            margin: 0 auto;
+            padding: 0 var(--space-lg);
+        }
+
+        .section .container {
+            max-width: var(--content-max-width);
+            margin-top: var(--space-xl);
+            margin-bottom: 0;
+        }
+
+        .section:last-of-type .container {
+            margin-bottom: var(--section-padding);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: #003740;
+            color: var(--white);
+            padding: var(--space-md) 0 var(--space-md) 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero .container,
+        .footer .container {
+            max-width: var(--container-max-width);
+        }
+
+        .hero__content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .hero__title {
+            font-family: var(--font-heading);
+            font-size: clamp(2.25rem, 4vw, 2.75rem);
+            font-weight: var(--font-extrabold);
+            line-height: var(--leading-tight);
+            margin: 0 0 var(--space-xs) 0;
+            background: linear-gradient(135deg, var(--white) 0%, rgba(255, 255, 255, 0.9) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.02em;
+        }
+
+        .hero__subtitle {
+            font-size: var(--text-xl);
+            font-weight: var(--font-normal);
+            line-height: var(--leading-normal);
+            color: var(--gray-300);
+            margin: 0 0 var(--space-xs) 0;
+        }
+
+        .hero__candidate-name {
+            font-family: var(--font-heading);
+            font-size: var(--text-xl);
+            font-weight: var(--font-normal);
+            line-height: var(--leading-normal);
+            margin: 0 0 var(--space-xs) 0;
+            color: rgba(255, 255, 255, 0.95);
+            letter-spacing: 0.01em;
+        }
+
+        .hero__contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: var(--space-sm);
+            font-size: var(--text-lg);
+            margin-top: var(--space-sm);
+            margin-bottom: 0.125rem;
+        }
+
+        .hero__contact-item {
+            display: flex;
+            align-items: center;
+            color: var(--white);
+            text-decoration: none;
+            padding: var(--space-xxs) var(--space-xs);
+            background: rgba(255, 255, 255, 0.12);
+            border-radius: var(--radius-lg);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            transition: transform var(--motion-default), background-color var(--motion-default), box-shadow var(--motion-default);
+            box-shadow: var(--shadow-sm);
+            will-change: transform;
+            font-size: var(--text-base);
+        }
+
+        .hero__contact-item:hover {
+            background: var(--white);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+            color: #4B5563;
+        }
+
+        .hero__contact-arrow {
+            display: inline-flex;
+            opacity: 0.95;
+            font-size: var(--text-base);
+            font-weight: 600;
+            transition: var(--motion-default);
+            min-width: 14px;
+            justify-content: center;
+            margin-right: var(--space-xs);
+        }
+
+        .hero__contact-arrow::before {
+            content: "→";
+            display: inline-block;
+            transition: var(--motion-default);
+        }
+
+        .hero__contact-item:nth-child(2) .hero__contact-arrow::before {
+            content: "↗";
+        }
+
+        .hero__contact-item:hover .hero__contact-arrow::before {
+            content: "+";
+            background: #049B4A;
+            color: var(--white);
+            border-radius: 50%;
+            width: 14px;
+            height: 14px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--text-xs);
+        }
+
+        .hero__contact-static {
+            display: inline-block;
+        }
+
+        .hero__contact-full {
+            display: none;
+        }
+
+        .hero__contact-item:hover .hero__contact-static {
+            display: none;
+        }
+
+        .hero__contact-item:hover .hero__contact-full {
+            display: inline-block;
+        }
+
+        /* Sections */
+        .section {
+            padding: 0;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+            will-change: opacity, transform;
+        }
+
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section__title-row {
+            display: flex;
+            align-items: baseline;
+            gap: var(--space-lg);
+            margin-bottom: 0;
+            margin-top: 0;
+            padding-top: 0;
+        }
+
+        .section__number {
+            font-size: var(--text-xxl);
+            font-weight: var(--font-bold);
+            color: var(--brand-primary);
+            flex-shrink: 0;
+        }
+
+        .section__heading {
+            font-family: var(--font-heading);
+            font-size: var(--text-3xl);
+            font-weight: var(--font-bold);
+            color: #374151;
+            line-height: var(--leading-tight);
+            letter-spacing: -0.025em;
+            margin: 0 0 var(--space-xs) 0;
+        }
+
+        .section__subtitle {
+            font-family: var(--font-heading);
+            font-size: var(--text-xl);
+            font-weight: var(--font-normal);
+            color: #374151;
+            line-height: var(--leading-normal);
+            letter-spacing: -0.01em;
+            max-width: 65ch;
+            margin: 0 0 var(--space-md) 0;
+        }
+
+        /* === UNIFIED CARD SYSTEM === */
+        .card,
+        .execution-frameworks-card,
+        .icp-card,
+        .timeline__item {
+            background: var(--white);
+            border-radius: var(--radius-2xl);
+            padding: var(--space-md);
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--gray-200);
+            transition: all var(--motion-default);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        /* Card min-heights */
+        .execution-frameworks-card {
+            min-height: 240px;
+        }
+
+        #icp .icp-card {
+            min-height: 240px;
+        }
+
+        #approaches .icp-card {
+            min-height: auto;
+        }
+
+        /* === SECTION 4 SPECIFIC ENHANCEMENTS === */
+        #execution .icp-card {
+            min-height: 240px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #execution .icp-card .framework-list {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* === PROFESSIONAL HOVER EFFECTS === */
+
+        /* SECTIONS 1, 3, 4, 5 - Unified Elevation Hover Effect */
+        #overview .icp-card:hover,
+        #icp .icp-card:hover,
+        #execution .icp-card:hover,
+        #approaches .icp-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-hover-elevated);
+            border-color: var(--border-hover);
+        }
+
+        /* SECTION 2 - Timeline Special Treatment (Arrow Line Highlights Only) */
+        .section-v2 .timeline__item {
+            transition: all 0.3s ease;
+        }
+
+        .section-v2 .timeline__item:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-hover-elevated);
+            border-color: var(--border-hover);
+        }
+
+        /* Timeline Sub-Bullet Highlights on Hover */
+        .section-v2 .timeline__item:nth-child(1):hover .timeline-arrow-item {
+            background: linear-gradient(90deg,
+                transparent 0%,
+                rgba(10, 92, 107, 0.06) 5%,
+                rgba(10, 92, 107, 0.08) 50%,
+                rgba(10, 92, 107, 0.06) 95%,
+                transparent 100%);
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .section-v2 .timeline__item:nth-child(2):hover .timeline-arrow-item {
+            background: linear-gradient(90deg,
+                transparent 0%,
+                rgba(26, 135, 153, 0.06) 5%,
+                rgba(26, 135, 153, 0.08) 50%,
+                rgba(26, 135, 153, 0.06) 95%,
+                transparent 100%);
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .section-v2 .timeline__item:nth-child(3):hover .timeline-arrow-item {
+            background: linear-gradient(90deg,
+                transparent 0%,
+                rgba(4, 155, 74, 0.06) 5%,
+                rgba(4, 155, 74, 0.08) 50%,
+                rgba(4, 155, 74, 0.06) 95%,
+                transparent 100%);
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .framework-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            margin: 0 auto var(--space-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: var(--font-bold);
+            font-size: var(--text-base);
+            position: relative;
+            transition: all var(--motion-default);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .icp-card:hover .framework-icon {
+            transform: scale(1.05);
+        }
+
+        .framework-icon--1 { background: var(--phase-30-day); }
+        .framework-icon--2 { background: var(--phase-60-day); }
+        .framework-icon--3 { background: var(--phase-90-day); }
+        .framework-icon--4 { background: var(--phase-30-day); }
+
+        @media (max-width: 1024px) {
+            .section#execution .grid,
+            .section#execution [style*="grid-template-columns"] {
+                grid-template-columns: repeat(2, 1fr);
+                gap: var(--space-lg);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section#execution .grid,
+            .section#execution [style*="grid-template-columns"] {
+                grid-template-columns: 1fr;
+                gap: var(--space-md);
+            }
+        }
+
+        .execution-frameworks-card__content {
+            font-size: var(--text-base);
+            line-height: var(--leading-relaxed);
+            color: #4B5563;
+            text-align: left;
+            flex: 1;
+        }
+
+        .execution-frameworks-card__header {
+            display: flex;
+            align-items: center;
+            gap: var(--space-lg);
+            margin-bottom: var(--space-md);
+        }
+
+        /* === CARD TYPOGRAPHY SYSTEM === */
+        .execution-frameworks-card__title,
+        .icp-card__title,
+        .timeline__title {
+            font-family: var(--font-heading);
+            font-size: var(--text-xl);
+            font-weight: var(--font-bold);
+            color: #374151;
+            margin: 0 0 var(--space-sm) 0;
+            line-height: var(--leading-tight);
+        }
+
+        /* Grid Layouts */
+        .grid {
+            margin: 0 auto;
+            max-width: 100%;
+        }
+
+        .grid[data-grid="2col"] {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-md);
+        }
+
+        .grid[data-grid="3col"] {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-md);
+        }
+
+        .grid[data-grid="4col"] {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-md);
+        }
+
+        .grid[data-grid="3col-stepped"] {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-md);
+            position: relative;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            margin: 0;
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .timeline__container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-md);
+            position: relative;
+            margin-bottom: 0;
+        }
+
+        /* === REFINED TIMELINE ARROW HOVER EFFECTS === */
+        .timeline__item:hover .timeline-arrow-item {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        /* Extremely subtle arrow highlight - barely perceptible */
+        .timeline__item:hover .timeline-arrow-item:before {
+            content: '';
+            position: absolute;
+            left: -12px;
+            right: -12px;
+            top: -1px;
+            bottom: -1px;
+            background: linear-gradient(90deg,
+                transparent 0%,
+                rgba(4, 155, 74, 0.02) 5%,
+                rgba(4, 155, 74, 0.025) 50%,
+                rgba(4, 155, 74, 0.02) 95%,
+                transparent 100%
+            );
+            border-radius: 6px;
+            z-index: -1;
+            transition: all 0.3s ease;
+        }
+
+        .timeline__item:nth-child(2):hover .timeline-arrow-item:before {
+            background: linear-gradient(90deg,
+                transparent 0%,
+                rgba(0, 87, 102, 0.015) 5%,
+                rgba(0, 87, 102, 0.02) 50%,
+                rgba(0, 87, 102, 0.015) 95%,
+                transparent 100%
+            );
+        }
+
+        .timeline__item:nth-child(3):hover .timeline-arrow-item:before {
+            background: linear-gradient(90deg,
+                transparent 0%,
+                rgba(4, 155, 74, 0.015) 5%,
+                rgba(4, 155, 74, 0.02) 50%,
+                rgba(4, 155, 74, 0.015) 95%,
+                transparent 100%
+            );
+        }
+
+        .timeline__header {
+            margin-bottom: 0;
+        }
+
+        .timeline__content {
+            margin-bottom: 0;
+        }
+
+        .icp-card p,
+        .timeline__item p,
+        .timeline__content p,
+        .execution-frameworks-card p {
+            font-size: var(--text-base);
+            line-height: var(--leading-relaxed);
+            color: #4B5563;
+            margin-bottom: 0;
+        }
+
+        /* === TIMELINE ITEM STYLES === */
+        .timeline-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .timeline-list-item {
+            margin-bottom: var(--space-xs);
+        }
+
+        .timeline-list-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-item-content {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-sm);
+        }
+
+        .timeline-bullet {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-top: 0.5rem;
+            flex-shrink: 0;
+        }
+
+        .timeline-bullet--primary {
+            background: var(--phase-30-day);
+        }
+
+        .timeline-bullet--secondary {
+            background: var(--phase-60-day);
+        }
+
+        .timeline-bullet--accent {
+            background: var(--phase-90-day);
+        }
+
+        .timeline-item-text {
+            font-size: var(--text-base);
+            line-height: var(--leading-relaxed);
+            color: #4B5563;
+        }
+
+        .timeline-arrow-item {
+            display: flex;
+            gap: var(--space-xs);
+            padding: 4px 12px 4px calc(8px + var(--space-sm));
+            margin-top: var(--space-xxs);
+        }
+
+        .timeline-arrow {
+            color: var(--phase-30-day);
+            font-size: var(--text-base);
+        }
+
+        .timeline-arrow--secondary {
+            color: var(--phase-60-day);
+        }
+
+        .timeline-arrow--accent {
+            color: var(--phase-90-day);
+        }
+
+        .timeline-arrow-text {
+            font-size: var(--text-base);
+            line-height: var(--leading-relaxed);
+            color: #4B5563;
+        }
+
+        #approaches .icp-card p {
+            margin-bottom: 0;
+        }
+
+        /* === CARD SUBTITLE SYSTEM === */
+        .icp-card__subtitle,
+        .section__subtitle-tag,
+        .card__subtitle {
+            font-family: var(--font-heading);
+            font-size: var(--text-sm);
+            font-weight: var(--font-semibold);
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            margin: 0 0 var(--space-xs) 0;
+            padding-bottom: 6px;
+            border-bottom: 2px solid rgba(4, 155, 74, 0.12);
+            color: #005766;
+            line-height: var(--leading-tight);
+        }
+
+        /* === FRAMEWORK LIST STYLING === */
+        .framework-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .framework-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: var(--space-sm);
+            font-size: var(--text-base);
+            line-height: var(--leading-relaxed);
+            color: #4B5563;
+        }
+
+        .framework-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        .framework-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--brand-accent);
+            font-weight: var(--font-bold);
+            font-size: 1.2em;
+        }
+
+        /* Card-specific bullet colors */
+        .framework-card--1 .framework-list li::before {
+            color: var(--phase-30-day);
+        }
+
+        .framework-card--2 .framework-list li::before {
+            color: var(--phase-60-day);
+        }
+
+        .framework-card--3 .framework-list li::before {
+            color: var(--brand-accent);
+        }
+
+        .framework-card--4 .framework-list li::before {
+            color: var(--phase-90-day);
+        }
+
+        /* === NAVIGATION SYSTEM === */
+        .nav {
+            position: fixed;
+            top: 50%;
+            right: var(--space-xl);
+            transform: translateY(-50%);
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-sm);
+        }
+
+        .nav__dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--gray-300);
+            border: none;
+            cursor: pointer;
+            transition: transform var(--motion-fast), background-color var(--motion-fast);
+            position: relative;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav__dot:hover,
+        .nav__dot.active {
+            background: var(--brand-primary);
+            transform: scale(1.2);
+            box-shadow: 0 0 0 var(--space-xxs) rgba(0, 55, 64, 0.1);
+        }
+
+        .nav__dot::after {
+            content: attr(data-label);
+            position: absolute;
+            right: calc(100% + var(--space-md));
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--gray-900);
+            color: var(--white);
+            padding: var(--space-xs) var(--space-md);
+            border-radius: var(--radius-md);
+            font-size: var(--text-xs);
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--motion-fast);
+        }
+
+        .nav__dot:hover::after {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Footer */
+        .footer {
+            background: #003740;
+            color: var(--white);
+            padding: var(--space-md) 0 var(--space-md) 0;
+            text-align: center;
+        }
+
+        /* === RESPONSIVE BREAKPOINTS === */
+
+        /* === TABLET OPTIMIZATION: 2x2 GRID === */
+        @media (max-width: 1200px) and (min-width: 969px) {
+            .grid[data-grid="4col"] {
+                grid-template-columns: repeat(2, 1fr);
+                gap: var(--space-lg);
+            }
+
+            .icp-card,
+            .execution-frameworks-card {
+                min-height: 280px;
+            }
+        }
+
+        @media (max-width: 968px) {
+            .section .container {
+                max-width: 100%;
+            }
+
+            .hero .container,
+            .footer .container {
+                max-width: 100%;
+            }
+
+            .grid[data-grid="2col"],
+            .grid[data-grid="4col"],
+            .grid[data-grid="3col-stepped"] {
+                grid-template-columns: 1fr;
+                gap: var(--space-md);
+            }
+
+            .timeline__container {
+                grid-template-columns: 1fr;
+                gap: var(--space-md);
+            }
+
+            .icp-card,
+            .execution-frameworks-card {
+                margin-bottom: var(--space-md);
+            }
+
+            .timeline__item {
+                padding: var(--space-md);
+            }
+
+            .timeline__content li {
+                margin-bottom: var(--space-sm);
+            }
+
+            .timeline-arrow-item {
+                display: inline;
+                padding: 0;
+                margin: 0 0 0 var(--space-xs);
+                font-size: var(--text-sm);
+                white-space: nowrap;
+            }
+
+            .timeline-arrow-item span:first-child {
+                margin-right: var(--space-xxs);
+            }
+
+            .timeline__item:hover .timeline-arrow-item:before {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .timeline-arrow-item {
+                display: block;
+                margin: var(--space-xxs) 0 0 calc(8px + var(--space-sm));
+                white-space: normal;
+                font-size: var(--text-xs);
+            }
+        }
+
+        @media (max-width: 1024px) and (min-width: 769px) {
+            .section .container {
+                max-width: 900px;
+            }
+
+            .hero .container,
+            .footer .container {
+                max-width: 1000px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                display: none;
+            }
+
+            .hero__contact-info {
+                flex-direction: column;
+                gap: var(--space-sm);
+            }
+
+            .hero,
+            .footer {
+                padding-top: var(--section-padding-mobile);
+                padding-bottom: var(--section-padding-mobile);
+            }
+
+            .section .container {
+                margin-top: var(--space-lg);
+                margin-bottom: 0;
+            }
+
+            .section:last-of-type .container {
+                margin-bottom: var(--section-padding-mobile);
+            }
+
+            .section__heading {
+                font-size: clamp(1.5rem, 4vw, 1.875rem);
+            }
+
+            .section__subtitle {
+                font-size: clamp(1rem, 3vw, 1.25rem);
+            }
+
+            .icp-card,
+            .execution-frameworks-card {
+                padding: var(--space-md);
+                margin-bottom: var(--space-md);
+            }
+        }
+
+        @media (min-width: 1400px) {
+            .section .container {
+                max-width: var(--container-max-width);
+            }
+
+            .hero .container,
+            .footer .container {
+                max-width: 1400px;
+            }
+
+            body {
+                font-size: var(--text-lg);
+            }
+        }
+
+        /* === PRINT STYLES === */
+        @media print {
+            * {
+                -webkit-print-color-adjust: exact;
+                color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            :root {
+                --space-xxs: 2px;
+                --space-xs: 4px;
+                --space-sm: 8px;
+                --space-md: 10px;
+                --space-lg: 14px;
+                --space-xl: 18px;
+                --space-2xl: 24px;
+                --section-padding: 16px;
+            }
+
+            html, body {
+                zoom: 0.75;
+                font-size: var(--text-xs);
+                line-height: 1.4;
+            }
+
+            .nav {
+                display: none;
+            }
+
+            .hero__contact-info {
+                display: none;
+            }
+
+            .hero, .footer {
+                padding: var(--space-md) 0;
+            }
+
+            .section {
+                opacity: 1;
+                transform: none;
+                page-break-inside: avoid;
+                padding: 0;
+            }
+
+            .section .container {
+                margin-top: var(--space-lg);
+                margin-bottom: var(--space-lg);
+            }
+
+            .section__title-row {
+                margin-top: var(--space-sm);
+            }
+
+            .section__heading {
+                font-size: var(--text-base);
+                margin-bottom: var(--space-sm);
+            }
+
+            .section__subtitle {
+                font-size: var(--text-sm);
+                margin-bottom: var(--space-sm);
+            }
+
+            .icp-card {
+                margin-bottom: var(--space-md);
+                padding: var(--space-md);
+            }
+
+            h1, h2 {
+                page-break-after: avoid;
+            }
+
+            .timeline-arrow-item {
+                margin-top: var(--space-xxs);
+            }
+
+            @page {
+                margin: 0.4in 0.65in;
+            }
+        }
+
+        /* === STRATEGIC DISCLAIMER === */
+        .strategic-disclaimer {
+            font-size: var(--text-base);
+            font-weight: var(--font-normal);
+            line-height: var(--leading-relaxed);
+            color: #374151;
+            margin: var(--space-md) 0 0 0;
+            text-align: center;
+            border-left: 4px solid var(--brand-accent);
+            border-radius: var(--radius-lg);
+            padding: var(--space-sm) var(--space-md);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" role="navigation" aria-label="Page sections">
+        <button class="nav__dot" data-label="Strategic Overview" data-target="overview"></button>
+        <button class="nav__dot" data-label="30-60-90 Roadmap" data-target="timeline"></button>
+        <button class="nav__dot" data-label="Target Markets Strategy" data-target="icp"></button>
+        <button class="nav__dot" data-label="Execution Framework" data-target="execution"></button>
+        <button class="nav__dot" data-label="Impact Drivers" data-target="approaches"></button>
+    </nav>
+
+    <!-- Header -->
+    <header class="hero" role="banner">
+        <div class="container">
+            <div class="hero__content">
+                <h1 class="hero__title">30-60-90 Day Strategic Briefing</h1>
+                <p class="hero__candidate-name">Strategic Account Executive Role</p>
+                <p class="hero__subtitle">Candidate: Joshua (JD) Deleon</p>
+                <div class="hero__contact-info">
+                    <a class="hero__contact-item" href="mailto:joshua2250@berkeley.edu">
+                        <span class="hero__contact-arrow"></span>
+                        <span class="hero__contact-text">
+                            <span class="hero__contact-static">Email</span>
+                            <span class="hero__contact-full">joshua2250@berkeley.edu</span>
+                        </span>
+                    </a>
+                    <a class="hero__contact-item" href="https://linkedin.com/in/jd-gtm" target="_blank">
+                        <span class="hero__contact-arrow"></span>
+                        <span class="hero__contact-text">
+                            <span class="hero__contact-static">LinkedIn</span>
+                            <span class="hero__contact-full">linkedin.com/in/jd-gtm</span>
+                        </span>
+                    </a>
+                    <a class="hero__contact-item" href="tel:+12099476557">
+                        <span class="hero__contact-arrow"></span>
+                        <span class="hero__contact-text">
+                            <span class="hero__contact-static">Phone</span>
+                            <span class="hero__contact-full">209-947-6557</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Strategic Overview -->
+        <section class="section" id="overview">
+            <div class="container">
+                <div class="section__title-row">
+                    <div class="section__number">1</div>
+                    <h2 class="section__heading">Executive Overview</h2>
+                </div>
+                <p class="section__subtitle">Revenue Strategy & Proven Performance</p>
+
+                <article class="icp-card" style="margin-top: var(--space-sm);">
+                    <p>Leverages $7.5M+ SaaS and services revenue track record with POC-to-production expertise to accelerate growth at CircleCI. Proven ability to compress deployment and transformation timelines through ROI modeling, technical multi-stakeholder orchestration, and systematic sales execution.</p>
+
+                    <p style="margin-top: var(--space-sm);">Framework structured around four execution pillars: 30-60-90 roadmap with measurable milestones, signal-driven ICP targeting strategy for migration and acceleration opportunities, systematic sales methodology, and differentiated impact levers converting technical credibility into revenue.</p>
+
+                    <div class="strategic-disclaimer" style="margin-top: var(--space-sm);">
+                        <p>This briefing is a high-level overview for interview discussions; final roadmap aligned during onboarding with leadership</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 30/60/90 Timeline -->
+        <section class="section section-v2" id="timeline">
+            <div class="container">
+                <div class="section__title-row">
+                    <div class="section__number">2</div>
+                    <h2 class="section__heading">30-60-90 Day Execution Roadmap</h2>
+                </div>
+                <p class="section__subtitle">Milestones to Accelerate Enterprise Growth</p>
+                <div class="timeline__container" style="margin-top: var(--space-sm);">
+                    <!-- First 30 Days -->
+                    <div class="timeline__item">
+                        <div class="timeline__header">
+                            <h3 class="timeline__title">DevOps Foundation</h3>
+                            <div class="icp-card__subtitle">FIRST 30 DAYS</div>
+                        </div>
+                        <div class="timeline__content">
+                            <ul class="timeline-list">
+                                <li class="timeline-list-item">
+                                    <div class="timeline-item-content">
+                                        <span class="timeline-bullet timeline-bullet--primary"></span>
+                                        <span class="timeline-item-text">Deep-dive CircleCI platform</span>
+                                    </div>
+                                    <div class="timeline-arrow-item">
+                                        <span class="timeline-arrow">→</span>
+                                        <span class="timeline-arrow-text">Product cert + positioning</span>
+                                    </div>
+                                </li>
+                                <li class="timeline-list-item">
+                                    <div class="timeline-item-content">
+                                        <span class="timeline-bullet timeline-bullet--primary"></span>
+                                        <span class="timeline-item-text">Stand up sales tech stack</span>
+                                    </div>
+                                    <div class="timeline-arrow-item">
+                                        <span class="timeline-arrow">→</span>
+                                        <span class="timeline-arrow-text">CRM & DevOps signals live</span>
+                                    </div>
+                                </li>
+                                <li class="timeline-list-item">
+                                    <div class="timeline-item-content">
+                                        <span class="timeline-bullet timeline-bullet--primary"></span>
+                                        <span class="timeline-item-text">Master POC success patterns</span>
+                                    </div>
+                                    <div class="timeline-arrow-item">
+                                        <span class="timeline-arrow">→</span>
+                                        <span class="timeline-arrow-text">6 case studies internalized</span>
+                                    </div>
+                                </li>
+                                <li class="timeline-list-item">
+                                    <div class="timeline-item-content">
+                                        <span class="timeline-bullet timeline-bullet--primary"></span>
+                                        <span class="timeline-item-text">Define DevOps ICP + personas</span>
+                                    </div>
+                                    <div class="timeline-arrow-item">
+                                        <span class="timeline-arrow">→</span>
+                                        <span class="timeline-arrow-text">150 migration targets ID'd</span>
+                                    </div>
+                                </li>
+                                <li class="timeline-list-item">
+                                    <div class="timeline-item-content">
+                                        <span class="timeline-bullet timeline-bullet--primary"></span>
+                                        <span class="timeline-item-text">Launch technical sequences</span>
+                                    </div>
+                                    <div class="timeline-arrow-item">
+                                        <span class="timeline-arrow">→</span>
+                                        <span class="timeline-arrow-text">12 technical discovery calls</span>
+                                    </div>
+                                </li>
+                                <li class="timeline-list-item">
+                                    <div class="timeline-item-content">
+                                        <span class="timeline-bullet timeline-bullet--primary"></span>
+                                        <span class="timeline-item-text">Map competitive battlecards</span>
+                                    </div>
+                                    <div class="timeline-arrow-item">
+                                        <span class="timeline-arrow">→</span>
+                                        <span class="timeline-arrow-text">4 competitor playbooks ready</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Days 31-60 -->
+                    <div class="timeline__item">
+                        <div class="timeline__header">
+                            <h3 class="timeline__title">Pipeline Activation</h3>
+                            <div class="icp-card__subtitle">DAYS 31-60</div>
+                        </div>
+                        <div class="timeline__content">
+                            <ul class="timeline-list">
+                                <li class="timeline-list-item">
+                                    <div class="timeline-item-content">
+                                        <span class="timeline-bullet timeline-bullet--secondary"></span>
+                                        <span class="timeline-item-text">Build vertical narratives</span>
+                                    </div>
+                                    <div class="timeline-arrow-item">
+                                        <span class="timeline-arrow timeline-arrow--secondary">→</span>
+                                        <span class="timeline-arrow-text">5 industry sequences live</span>
+                                    </div>
+                                </li>
+                                <li class="timeline-list-item">
+                                    <div class="timeline-item-content">
+                                        <span class="timeline-bullet timeline-bullet--secondary"></span>
+                                        <span class="timeline-item-text">Execute signal-based outbound</span>
+                                    </div>
+                                    <div class="timeline-arrow-item">
+                                        <span class="timeline-arrow timeline-arrow--secondary">→</span>
+                                        <span class="timeline-arrow-text">40 high-intent accounts engaged</span>
+                                    </div>
+                                </li>
+                                <li class="timeline-list-item">
+                                    <div class="timeline-item-content">
+                                        <span class="timeline-bullet timeline-bullet--secondary"></span>
+                                        <span class="timeline-item-text">Activate cloud partnerships</span>
+                                    </div>
+                                    <div class="timeline-arrow-item">
+                                        <span class="timeline-arrow timeline-arrow--secondary">→</span>
+                                        <span class="timeline-arrow-text">3+ AWS/GCP co-sell intros</span>
+                                    </div>
+                                </li>
+                                <li class="timeline-list-item">
+                                    <div class="timeline-item-content">
+                                        <span class="timeline-bullet timeline-bullet--secondary"></span>
+                                        <span class="timeline-item-text">Run technical POC discovery</span>
+                                    </div>
+                                    <div class="timeline-arrow-item">
+                                        <span class="timeline-arrow timeline-arrow--secondary">→</span>
+                                        <span class="timeline-arrow-text">+25% conversion to POC</span>
+                                    </div>
+                                </li>
+                                <li class="timeline-list-item">
+                                    <div class="timeline-item-content">
+                                        <span class="timeline-bullet timeline-bullet--secondary"></span>
+                                        <span class="timeline-item-text">Build qualified pipeline</span>
+                                    </div>
+                                    <div class="timeline-arrow-item">
+                                        <span class="timeline-arrow timeline-arrow--secondary">→</span>
+                                        <span class="timeline-arrow-text">12 qualified opps created</span>
+                                    </div>
+                                </li>
+                                <li class="timeline-list-item">
+                                    <div class="timeline-item-content">
+                                        <span class="timeline-bullet timeline-bullet--secondary"></span>
+                                        <span class="timeline-item-text">Close POC opportunities</span>
+                                    </div>
+                                    <div class="timeline-arrow-item">
+                                        <span class="timeline-arrow timeline-arrow--secondary">→</span>
+                                        <span class="timeline-arrow-text">3+ net new POCs initiated</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Days 61-90 -->
+                    <div class="timeline__item">
+                        <div class="timeline__header">
+                            <h3 class="timeline__title">Enterprise Conversion</h3>
+                            <div class="icp-card__subtitle">DAYS 61-90</div>
+                        </div>
+                        <div class="timeline__content">
+                            <ul class="timeline-list">
+                                <li class="timeline-list-item">
+                                    <div class="timeline-item-content">
+                                        <span class="timeline-bullet timeline-bullet--accent"></span>
+                                        <span class="timeline-item-text">Codify POC-to-prod playbook</span>
+                                    </div>
+                                    <div class="timeline-arrow-item">
+                                        <span class="timeline-arrow timeline-arrow--accent">→</span>
+                                        <span class="timeline-arrow-text">Jenkins migration guide built</span>
+                                    </div>
+                                </li>
+                                <li class="timeline-list-item">
+                                    <div class="timeline-item-content">
+                                        <span class="timeline-bullet timeline-bullet--accent"></span>
+                                        <span class="timeline-item-text">Build ROI calculator tool</span>
+                                    </div>
+                                    <div class="timeline-arrow-item">
+                                        <span class="timeline-arrow timeline-arrow--accent">→</span>
+                                        <span class="timeline-arrow-text">DevOps productivity model live</span>
+                                    </div>
+                                </li>
+                                <li class="timeline-list-item">
+                                    <div class="timeline-item-content">
+                                        <span class="timeline-bullet timeline-bullet--accent"></span>
+                                        <span class="timeline-item-text">Maintain healthy coverage</span>
+                                    </div>
+                                    <div class="timeline-arrow-item">
+                                        <span class="timeline-arrow timeline-arrow--accent">→</span>
+                                        <span class="timeline-arrow-text">≥ 4.5:1 pipeline coverage</span>
+                                    </div>
+                                </li>
+                                <li class="timeline-list-item">
+                                    <div class="timeline-item-content">
+                                        <span class="timeline-bullet timeline-bullet--accent"></span>
+                                        <span class="timeline-item-text">Advance enterprise pipeline</span>
+                                    </div>
+                                    <div class="timeline-arrow-item">
+                                        <span class="timeline-arrow timeline-arrow--accent">→</span>
+                                        <span class="timeline-arrow-text">30% to commercial negotiation</span>
+                                    </div>
+                                </li>
+                                <li class="timeline-list-item">
+                                    <div class="timeline-item-content">
+                                        <span class="timeline-bullet timeline-bullet--accent"></span>
+                                        <span class="timeline-item-text">Build technical business cases</span>
+                                    </div>
+                                    <div class="timeline-arrow-item">
+                                        <span class="timeline-arrow timeline-arrow--accent">→</span>
+                                        <span class="timeline-arrow-text">6 ROI models validated</span>
+                                    </div>
+                                </li>
+                                <li class="timeline-list-item">
+                                    <div class="timeline-item-content">
+                                        <span class="timeline-bullet timeline-bullet--accent"></span>
+                                        <span class="timeline-item-text">Convert POCs to production</span>
+                                    </div>
+                                    <div class="timeline-arrow-item">
+                                        <span class="timeline-arrow timeline-arrow--accent">→</span>
+                                        <span class="timeline-arrow-text">1-2 net new deals closed</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Target Markets Strategy -->
+        <section class="section" id="icp">
+            <div class="container">
+                <div class="section__title-row">
+                    <div class="section__number">3</div>
+                    <h2 class="section__heading">Ideal Customer Profile & Market Strategy</h2>
+                </div>
+                <p class="section__subtitle">Targeting High-Value CI/CD Transformation Opportunities</p>
+                <div class="grid" data-grid="2col">
+                    <article class="icp-card">
+                        <h3 class="icp-card__title">Target Organization Profile</h3>
+                        <div class="icp-card__subtitle">ORGANIZATION</div>
+                        <p style="margin-bottom: var(--space-md);">Mid-to-Enterprise tech ($50M-$5B, 500-20K employees, 50-1000+ developers) accelerating deployment velocity and productivity.</p>
+                        <div class="icp-card__subtitle">OFFERINGS</div>
+                        <p style="margin-bottom: var(--space-md);">CI/CD automation, cloud-native pipelines, autonomous AI validation, FedRAMP compliance across regulated industries.</p>
+                        <div class="icp-card__subtitle">FIT PROFILE</div>
+                        <p>DevOps modernization needs, Jenkins migration requirements, FedRAMP mandates, rapid engineering scaling.</p>
+                    </article>
+
+                    <article class="icp-card">
+                        <h3 class="icp-card__title">Key Stakeholders</h3>
+                        <div class="icp-card__subtitle">DECISION MAKERS</div>
+                        <p style="margin-bottom: var(--space-md);">VP Engineering, CTO, Head of DevOps, Head of Platform Engineering, VP Infrastructure</p>
+                        <div class="icp-card__subtitle">INFLUENCERS/CHAMPIONS</div>
+                        <p style="margin-bottom: var(--space-md);">Senior DevOps Engineers, Platform Engineers, Security Architects, SRE Leads</p>
+                        <div class="icp-card__subtitle">USERS</div>
+                        <p>Software Engineers, DevOps Engineers, SREs, Platform Teams, QA/Test Engineers</p>
+                    </article>
+
+                    <article class="icp-card">
+                        <h3 class="icp-card__title">Signals & Intent</h3>
+                        <div class="icp-card__subtitle">TECHNICAL</div>
+                        <p style="margin-bottom: var(--space-md);">Jenkins usage, GitHub Enterprise, AWS/GCP/Azure migrations, Platform Engineering hiring, DevOps job postings</p>
+                        <div class="icp-card__subtitle">OPERATIONAL</div>
+                        <p style="margin-bottom: var(--space-md);">Slow builds (>15min), deployment bottlenecks, scaling teams (10+ devs/quarter), build failures</p>
+                        <div class="icp-card__subtitle">STRATEGIC</div>
+                        <p>AI/ML development, security mandates (SOC 2, FedRAMP), productivity OKRs, digital transformation</p>
+                    </article>
+
+                    <article class="icp-card">
+                        <h3 class="icp-card__title">Value Proposition Alignment</h3>
+                        <div class="icp-card__subtitle">CORE</div>
+                        <p style="margin-bottom: var(--space-md);">3x faster builds, 24/7 AI validation, FedRAMP + SOC 2 compliance, multi-VCS support, flexible pricing</p>
+                        <div class="icp-card__subtitle">OUTCOMES</div>
+                        <p style="margin-bottom: var(--space-md);">3x faster deployment velocity, 5x workflow acceleration, $500K+ annual savings, dramatically fewer production failures</p>
+                        <div class="icp-card__subtitle">DIFFERENTIATORS</div>
+                        <p>Leading 24/7 autonomous AI agent, industry-leading performance, FedRAMP + SOC 2 certified, flexible credit-based pricing</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Execution Framework -->
+        <section class="section" id="execution">
+            <div class="container">
+                <header class="section__header">
+                    <div class="section__title-row">
+                        <div class="section__number">4</div>
+                        <h2 class="section__heading">Systematic Revenue Generation Framework</h2>
+                    </div>
+                    <p class="section__subtitle">Proven 16-Step Methodology & Guides for Predictable Pipeline</p>
+                </header>
+
+                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-md); margin-top: var(--space-sm);">
+                    <article class="icp-card framework-card--1">
+                        <div class="framework-icon framework-icon--1">1-4</div>
+                        <h3 class="icp-card__title">Market Intelligence & Strategic Alignment</h3>
+                        <div class="icp-card__subtitle">FOUNDATION</div>
+                        <ul class="framework-list">
+                            <li>ICP definition and value proposition</li>
+                            <li>Buyer persona validation</li>
+                            <li>Solution positioning for enterprise approach</li>
+                        </ul>
+                    </article>
+
+                    <article class="icp-card framework-card--2">
+                        <div class="framework-icon framework-icon--2">5-8</div>
+                        <h3 class="icp-card__title">Account Planning & Systematic Outbound</h3>
+                        <div class="icp-card__subtitle">EXECUTION</div>
+                        <ul class="framework-list">
+                            <li>Strategic account segmentation</li>
+                            <li>Outbound cadence and targeted messaging</li>
+                            <li>Continuous optimization through analytics</li>
+                        </ul>
+                    </article>
+
+                    <article class="icp-card framework-card--3">
+                        <div class="framework-icon framework-icon--3">9-12</div>
+                        <h3 class="icp-card__title">Discovery Framework & Deal Qualification</h3>
+                        <div class="icp-card__subtitle">CONVERSION</div>
+                        <ul class="framework-list">
+                            <li>Structured discovery validating problems</li>
+                            <li>Executive sponsors and committee alignment</li>
+                            <li>Confirmed Go Live plan with stakeholders</li>
+                        </ul>
+                    </article>
+
+                    <article class="icp-card framework-card--4">
+                        <div class="framework-icon framework-icon--4">13-16</div>
+                        <h3 class="icp-card__title">Deal Advancement & Revenue Realization</h3>
+                        <div class="icp-card__subtitle">CLOSURE</div>
+                        <ul class="framework-list">
+                            <li>Vendor selection confirmation</li>
+                            <li>Timeline management with compelling events</li>
+                            <li>Commercial agreement and systematic review</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact Drivers -->
+        <section class="section" id="approaches">
+            <div class="container">
+                <div class="section__title-row">
+                    <div class="section__number">5</div>
+                    <h2 class="section__heading">Impact Levers</h2>
+                </div>
+                <p class="section__subtitle">Converting Technical Expertise Into Revenue Growth</p>
+                <div class="grid" data-grid="2col">
+                    <article class="icp-card">
+                        <h3 class="icp-card__title">Technical Credibility with Engineering Leaders</h3>
+                        <div class="icp-card__subtitle">CORE APPROACH</div>
+                        <p>Build trust with CTOs, VPs Engineering, DevOps leaders through CI/CD pipeline expertise, cloud-native architecture fluency, and proven AI infrastructure sales experience across enterprise accounts.</p>
+                    </article>
+
+                    <article class="icp-card">
+                        <h3 class="icp-card__title">ROI-Driven Technical Discovery</h3>
+                        <div class="icp-card__subtitle">METHODOLOGY</div>
+                        <p>Translate deployment velocity goals into structured ROI programs with clear milestones, leveraging cloud modernization and DevOps transformation expertise.</p>
+                    </article>
+
+                    <article class="icp-card">
+                        <h3 class="icp-card__title">Execution Excellence</h3>
+                        <div class="icp-card__subtitle">DELIVERY</div>
+                        <p>Drive POC delivery through proactive stakeholder management and rapid technical response. Consistent enterprise quota attainment across SaaS and infrastructure.</p>
+                    </article>
+
+                    <article class="icp-card">
+                        <h3 class="icp-card__title">Strategic Expansion</h3>
+                        <div class="icp-card__subtitle">GROWTH</div>
+                        <p>Identify enterprise expansion opportunities, build strategic cloud marketplace partnerships, and scale POCs to multi-year renewals through systematic value tracking.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="hero__content">
+                <h1 class="hero__title">Ready to Drive & Close Pipeline at CircleCI</h1>
+                <p class="hero__candidate-name">Strategic Account Executive Role</p>
+                <p class="hero__subtitle">Candidate: Joshua (JD) Deleon</p>
+                <div class="hero__contact-info">
+                    <a class="hero__contact-item" href="https://drive.google.com/file/d/1ptzKftZT7Nwkyk6fHKnRv3oKmosA9nMC/view?usp=sharing" target="_blank">
+                        <span class="hero__contact-arrow"></span>
+                        <span class="hero__contact-text">
+                            <span class="hero__contact-static">View Resume</span>
+                            <span class="hero__contact-full">PDF Download</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function() {
+            'use strict';
+
+            const observerOptions = {
+                threshold: [0.1, 0.3, 0.5],
+                rootMargin: '50px 0px -50px 0px'
+            };
+
+            let observer;
+            try {
+                observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting && entry.target) {
+                            entry.target.classList.add('visible');
+
+                            if (entry.intersectionRatio > 0.3 && entry.target.id) {
+                                const targetId = entry.target.id;
+                                const navDots = document.querySelectorAll('.nav__dot');
+                                navDots.forEach(dot => {
+                                    if (dot && dot.getAttribute) {
+                                        dot.classList.toggle('active', dot.getAttribute('data-target') === targetId);
+                                    }
+                                });
+                            }
+                        }
+                    });
+                }, observerOptions);
+            } catch (error) {
+                console.warn('IntersectionObserver not supported:', error);
+            }
+
+            function setupNavigation() {
+                const navDots = document.querySelectorAll('.nav__dot');
+                navDots.forEach(dot => {
+                    if (!dot) return;
+
+                    dot.addEventListener('click', (e) => {
+                        try {
+                            const targetId = dot.getAttribute('data-target');
+                            if (!targetId) return;
+
+                            const targetSection = document.getElementById(targetId);
+                            if (targetSection) {
+                                targetSection.scrollIntoView({
+                                    behavior: 'smooth',
+                                    block: 'start'
+                                });
+                            }
+                        } catch (error) {
+                            console.warn('Navigation error:', error);
+                        }
+                    });
+                });
+            }
+
+            document.addEventListener('DOMContentLoaded', () => {
+                try {
+                    const sections = document.querySelectorAll('.section');
+                    sections.forEach(section => {
+                        if (section) section.classList.add('visible');
+                    });
+
+                    const firstNavDot = document.querySelector('.nav__dot');
+                    if (firstNavDot) {
+                        firstNavDot.classList.add('active');
+                    }
+
+                    setupNavigation();
+
+                    if (observer) {
+                        setTimeout(() => {
+                            sections.forEach(section => {
+                                if (section) observer.observe(section);
+                            });
+                        }, 200);
+                    }
+                } catch (error) {
+                    console.warn('Initialization error:', error);
+                }
+            });
+        })();
+    </script>
+</body>
+</html>

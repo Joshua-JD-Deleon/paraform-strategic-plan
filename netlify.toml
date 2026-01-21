@@ -1,0 +1,17 @@
+[build]
+  command = "npm run build"
+  publish = "out"
+
+# Production (main branch) - include all pages
+[context.production]
+  command = "npm run build"
+
+# Branch deploys (interview-prep) - include everything
+[context.branch-deploy]
+  command = "npm run build"
+
+# Specific context for interview-prep branch
+[context.interview-prep]
+  command = "npm run build"
+  [context.interview-prep.environment]
+    NEXT_PUBLIC_SHOW_PREP = "true"
