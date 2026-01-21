@@ -126,7 +126,7 @@ function ROICalculator() {
   };
 
   return (
-    <Card className="shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-200/50 hover:border-indigo-300 bg-white">
+    <Card className="shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-200/50 hover:border-blue-300 bg-white">
       <CardHeader>
         <div className="flex items-center gap-3">
           <div className="p-2.5 md:p-3 rounded-xl bg-gradient-to-br from-slate-600 to-slate-700 shadow-lg shadow-slate-500/20">
@@ -153,7 +153,7 @@ function ROICalculator() {
                 type="number"
                 value={hoursPerRfp}
                 onChange={(e) => setHoursPerRfp(Math.max(1, parseInt(e.target.value) || 0))}
-                className="w-full px-2 py-1.5 text-sm border border-slate-200 rounded-lg bg-white text-slate-900 hover:border-indigo-300 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent transition-colors"
+                className="w-full px-2 py-1.5 text-sm border border-slate-200 rounded-lg bg-white text-slate-900 hover:border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-colors"
                 min="1"
               />
               <p className="text-xs text-slate-400">Avg: 40 hrs</p>
@@ -165,7 +165,7 @@ function ROICalculator() {
                 type="number"
                 value={rfpsPerYear}
                 onChange={(e) => setRfpsPerYear(Math.max(1, parseInt(e.target.value) || 0))}
-                className="w-full px-2 py-1.5 text-sm border border-slate-200 rounded-lg bg-white text-slate-900 hover:border-indigo-300 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent transition-colors"
+                className="w-full px-2 py-1.5 text-sm border border-slate-200 rounded-lg bg-white text-slate-900 hover:border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-colors"
                 min="1"
               />
               <p className="text-xs text-slate-400">Annual volume</p>
@@ -179,7 +179,7 @@ function ROICalculator() {
                   type="number"
                   value={hourlyRate}
                   onChange={(e) => setHourlyRate(Math.max(1, parseInt(e.target.value) || 0))}
-                  className="w-full pl-5 pr-2 py-1.5 text-sm border border-slate-200 rounded-lg bg-white text-slate-900 hover:border-indigo-300 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent transition-colors"
+                  className="w-full pl-5 pr-2 py-1.5 text-sm border border-slate-200 rounded-lg bg-white text-slate-900 hover:border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-colors"
                   min="1"
                 />
               </div>
@@ -194,7 +194,7 @@ function ROICalculator() {
                   const tier = ARPHIE_TIERS.find(t => t.id === e.target.value);
                   if (tier) setSelectedTier(tier);
                 }}
-                className="w-full px-2 py-1.5 text-sm border border-slate-200 rounded-lg bg-white text-slate-900 hover:border-indigo-300 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent transition-colors cursor-pointer appearance-none bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2012%2012%22%3E%3Cpath%20fill%3D%22%23475569%22%20d%3D%22M6%208L2%204h8z%22%2F%3E%3C%2Fsvg%3E')] bg-[position:right_8px_center] bg-no-repeat pr-7"
+                className="w-full px-2 py-1.5 text-sm border border-slate-200 rounded-lg bg-white text-slate-900 hover:border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-colors cursor-pointer appearance-none bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2012%2012%22%3E%3Cpath%20fill%3D%22%23475569%22%20d%3D%22M6%208L2%204h8z%22%2F%3E%3C%2Fsvg%3E')] bg-[position:right_8px_center] bg-no-repeat pr-7"
               >
                 {ARPHIE_TIERS.map((tier) => (
                   <option key={tier.id} value={tier.id}>
@@ -210,7 +210,7 @@ function ROICalculator() {
               <select
                 value={hasExistingSoftware ? "yes" : "no"}
                 onChange={(e) => setHasExistingSoftware(e.target.value === "yes")}
-                className="w-full px-2 py-1.5 text-sm border border-slate-200 rounded-lg bg-white text-slate-900 hover:border-indigo-300 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent transition-colors cursor-pointer appearance-none bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2012%2012%22%3E%3Cpath%20fill%3D%22%23475569%22%20d%3D%22M6%208L2%204h8z%22%2F%3E%3C%2Fsvg%3E')] bg-[position:right_8px_center] bg-no-repeat pr-7"
+                className="w-full px-2 py-1.5 text-sm border border-slate-200 rounded-lg bg-white text-slate-900 hover:border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-colors cursor-pointer appearance-none bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2012%2012%22%3E%3Cpath%20fill%3D%22%23475569%22%20d%3D%22M6%208L2%204h8z%22%2F%3E%3C%2Fsvg%3E')] bg-[position:right_8px_center] bg-no-repeat pr-7"
               >
                 <option value="no">No RFP software</option>
                 <option value="yes">Has RFP software</option>
@@ -264,15 +264,15 @@ function ROICalculator() {
               </p>
             </div>
 
-            <div className={`p-4 rounded-lg border ${calculations.paybackPeriodMonths <= 6 ? 'bg-green-50 border-green-200' : 'bg-indigo-50 border-indigo-200'}`}>
+            <div className={`p-4 rounded-lg border ${calculations.paybackPeriodMonths <= 6 ? 'bg-green-50 border-green-200' : 'bg-blue-50 border-blue-200'}`}>
               <h4 className="font-semibold text-slate-900 mb-2 flex items-center gap-2">
-                <Badge className={calculations.paybackPeriodMonths <= 6 ? 'bg-green-100 text-green-700 border border-green-200' : 'bg-indigo-100 text-indigo-700 border border-indigo-200'}>
+                <Badge className={calculations.paybackPeriodMonths <= 6 ? 'bg-green-100 text-green-700 border border-green-200' : 'bg-blue-100 text-blue-700 border border-blue-200'}>
                   <Clock className="h-3 w-3 mr-1" />
                   Payback
                 </Badge>
                 Time to ROI
               </h4>
-              <p className={`text-3xl font-bold ${calculations.paybackPeriodMonths <= 6 ? 'text-green-700' : 'text-indigo-700'}`}>
+              <p className={`text-3xl font-bold ${calculations.paybackPeriodMonths <= 6 ? 'text-green-700' : 'text-blue-700'}`}>
                 {calculations.paybackPeriodMonths < 1 ? '< 1' : calculations.paybackPeriodMonths.toFixed(1)} months
               </p>
               <p className="text-sm mt-1 text-slate-600">Time to recoup your investment</p>
@@ -301,7 +301,7 @@ function ROICalculator() {
         </div>
 
         {/* Summary callout */}
-        <div className="p-4 bg-indigo-600 rounded-lg text-white">
+        <div className="p-4 bg-blue-600 rounded-lg text-white">
           <h4 className="font-semibold text-white mb-2 flex items-center gap-2">
             <Badge className="bg-white/20 text-white border-white/30">
               <CheckCircle2 className="h-3 w-3 mr-1" />
@@ -309,7 +309,7 @@ function ROICalculator() {
             </Badge>
             Summary
           </h4>
-          <p className="text-sm text-indigo-100">
+          <p className="text-sm text-blue-100">
             With Arphie, your team could save <strong className="text-white">{formatNumber(calculations.hoursSavedPerYear)} hours</strong> and{' '}
             <strong className="text-white">{formatCurrency(calculations.netRoi)}</strong> annually.
             You would break even in just <strong className="text-white">{calculations.paybackPeriodMonths.toFixed(1)} months</strong>.
@@ -370,7 +370,7 @@ export default function FollowUpPage() {
           {!prefersReducedMotion && (
             <>
               <motion.div
-                className="absolute top-1/4 left-1/4 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl"
+                className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"
                 animate={{
                   scale: [1, 1.2, 1],
                   opacity: [0.3, 0.5, 0.3],
@@ -382,7 +382,7 @@ export default function FollowUpPage() {
                 }}
               />
               <motion.div
-                className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-indigo-400/10 rounded-full blur-3xl"
+                className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl"
                 animate={{
                   scale: [1.2, 1, 1.2],
                   opacity: [0.3, 0.5, 0.3],
@@ -405,7 +405,7 @@ export default function FollowUpPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
               >
-                <span className="bg-gradient-to-r from-white via-indigo-100 to-indigo-200 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-white via-blue-100 to-blue-200 bg-clip-text text-transparent">
                   My Approach
                 </span>
               </motion.h1>
@@ -459,7 +459,7 @@ export default function FollowUpPage() {
               {activeTab === "pre-call" && (
                 <div className="space-y-6">
                   {/* Research Checklist */}
-                  <Card className="shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-200/50 hover:border-indigo-300 bg-white">
+                  <Card className="shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-200/50 hover:border-blue-300 bg-white">
                     <CardHeader>
                       <div className="flex items-center gap-3">
                         <div className="p-2.5 md:p-3 rounded-xl bg-gradient-to-br from-slate-600 to-slate-700 shadow-lg shadow-slate-500/20">
@@ -506,7 +506,7 @@ export default function FollowUpPage() {
                   </Card>
 
                   {/* Call Planning */}
-                  <Card className="shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-200/50 hover:border-indigo-300 bg-white">
+                  <Card className="shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-200/50 hover:border-blue-300 bg-white">
                     <CardHeader>
                       <div className="flex items-center gap-3">
                         <div className="p-2.5 md:p-3 rounded-xl bg-gradient-to-br from-slate-600 to-slate-700 shadow-lg shadow-slate-500/20">
@@ -540,18 +540,18 @@ export default function FollowUpPage() {
                           <p className="text-xs text-slate-500 mb-2">What's the ideal outcome?</p>
                           <p className="text-sm text-slate-600 italic">Example: Demo with full team next week</p>
                         </div>
-                        <div className="md:col-span-2 p-4 bg-indigo-50 rounded-lg border border-indigo-100">
+                        <div className="md:col-span-2 p-4 bg-blue-50 rounded-lg border border-blue-100">
                           <h4 className="font-semibold text-slate-900 mb-3 flex items-center gap-2">
-                            <Badge className="bg-indigo-100 text-indigo-700 border border-indigo-200">
+                            <Badge className="bg-blue-100 text-blue-700 border border-blue-200">
                               <Target className="h-3 w-3 mr-1" />
                               3 Questions
                             </Badge>
                             I Must Ask
                           </h4>
                           <div className="grid md:grid-cols-3 gap-2">
-                            <p className="text-sm text-slate-700 italic p-3 bg-white rounded-lg border border-indigo-200">1. How are you handling RFPs today?</p>
-                            <p className="text-sm text-slate-700 italic p-3 bg-white rounded-lg border border-indigo-200">2. What's the bottleneck?</p>
-                            <p className="text-sm text-slate-700 italic p-3 bg-white rounded-lg border border-indigo-200">3. What if this doesn't get solved?</p>
+                            <p className="text-sm text-slate-700 italic p-3 bg-white rounded-lg border border-blue-200">1. How are you handling RFPs today?</p>
+                            <p className="text-sm text-slate-700 italic p-3 bg-white rounded-lg border border-blue-200">2. What's the bottleneck?</p>
+                            <p className="text-sm text-slate-700 italic p-3 bg-white rounded-lg border border-blue-200">3. What if this doesn't get solved?</p>
                           </div>
                         </div>
                       </div>
@@ -559,7 +559,7 @@ export default function FollowUpPage() {
                   </Card>
 
                   {/* Pre-Call Mindset */}
-                  <Card className="shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-200/50 hover:border-indigo-300 bg-white">
+                  <Card className="shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-200/50 hover:border-blue-300 bg-white">
                     <CardHeader>
                       <CardTitle className="flex items-center gap-2">
                         <Zap className="h-5 w-5 text-white" />
@@ -588,7 +588,7 @@ export default function FollowUpPage() {
               {activeTab === "call-frameworks" && (
                 <div className="space-y-6">
                   {/* Discovery Call Structure */}
-                  <Card className="shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-200/50 hover:border-indigo-300 bg-white">
+                  <Card className="shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-200/50 hover:border-blue-300 bg-white">
                     <CardHeader>
                       <div className="flex items-center gap-3">
                         <div className="p-2.5 md:p-3 rounded-xl bg-gradient-to-br from-slate-600 to-slate-700 shadow-lg shadow-slate-500/20">
@@ -604,28 +604,28 @@ export default function FollowUpPage() {
                       <div className="grid md:grid-cols-2 gap-4">
                         <div className="p-4 bg-stone-50 rounded-lg border border-slate-200">
                           <div className="flex items-center gap-2 mb-2">
-                            <Badge className="bg-indigo-600 text-white border border-indigo-700">0-3 min</Badge>
+                            <Badge className="bg-blue-600 text-white border border-blue-700">0-3 min</Badge>
                             <h4 className="font-semibold text-slate-900">Opening & Agenda</h4>
                           </div>
                           <p className="text-sm text-slate-600">Build rapport, set expectations. "Here's what I was hoping to cover - does that work?"</p>
                         </div>
                         <div className="p-4 bg-stone-50 rounded-lg border border-slate-200">
                           <div className="flex items-center gap-2 mb-2">
-                            <Badge className="bg-indigo-600 text-white border border-indigo-700">3-20 min</Badge>
+                            <Badge className="bg-blue-600 text-white border border-blue-700">3-20 min</Badge>
                             <h4 className="font-semibold text-slate-900">Discovery & Pain</h4>
                           </div>
                           <p className="text-sm text-slate-600">Go deep on 1-2 problems. Use PAIN funnel. Listen more than talk (70/30 rule).</p>
                         </div>
                         <div className="p-4 bg-stone-50 rounded-lg border border-slate-200">
                           <div className="flex items-center gap-2 mb-2">
-                            <Badge className="bg-indigo-600 text-white border border-indigo-700">20-25 min</Badge>
+                            <Badge className="bg-blue-600 text-white border border-blue-700">20-25 min</Badge>
                             <h4 className="font-semibold text-slate-900">Quick Demo (if earned)</h4>
                           </div>
                           <p className="text-sm text-slate-600">Only demo if you've uncovered real pain. Show 1-2 relevant features, not the whole product.</p>
                         </div>
                         <div className="p-4 bg-stone-50 rounded-lg border border-slate-200">
                           <div className="flex items-center gap-2 mb-2">
-                            <Badge className="bg-indigo-600 text-white border border-indigo-700">25-30 min</Badge>
+                            <Badge className="bg-blue-600 text-white border border-blue-700">25-30 min</Badge>
                             <h4 className="font-semibold text-slate-900">Next Steps</h4>
                           </div>
                           <p className="text-sm text-slate-600">Confirm what happens next. Who else needs to be involved? Book the next meeting NOW.</p>
@@ -635,7 +635,7 @@ export default function FollowUpPage() {
                   </Card>
 
                   {/* PAIN Funnel */}
-                  <Card className="shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-200/50 hover:border-indigo-300 bg-white">
+                  <Card className="shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-200/50 hover:border-blue-300 bg-white">
                     <CardHeader>
                       <div className="flex items-center gap-3">
                         <div className="p-2.5 md:p-3 rounded-xl bg-gradient-to-br from-slate-600 to-slate-700 shadow-lg shadow-slate-500/20">
@@ -668,7 +668,7 @@ export default function FollowUpPage() {
                   </Card>
 
                   {/* Qualification Framework */}
-                  <Card className="shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-200/50 hover:border-indigo-300 bg-white">
+                  <Card className="shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-200/50 hover:border-blue-300 bg-white">
                     <CardHeader>
                       <div className="flex items-center gap-3">
                         <div className="p-2.5 md:p-3 rounded-xl bg-gradient-to-br from-slate-600 to-slate-700 shadow-lg shadow-slate-500/20">
@@ -724,7 +724,7 @@ export default function FollowUpPage() {
               {activeTab === "follow-up" && (
                 <div className="space-y-6">
                   {/* Follow-Up Checklist */}
-                  <Card className="shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-200/50 hover:border-indigo-300 bg-white">
+                  <Card className="shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-200/50 hover:border-blue-300 bg-white">
                     <CardHeader>
                       <div className="flex items-center gap-3">
                         <div className="p-2.5 md:p-3 rounded-xl bg-gradient-to-br from-slate-600 to-slate-700 shadow-lg shadow-slate-500/20">
@@ -769,7 +769,7 @@ export default function FollowUpPage() {
                   </Card>
 
                   {/* Email Templates - 3 Column Layout */}
-                  <Card className="shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-200/50 hover:border-indigo-300 bg-white">
+                  <Card className="shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-200/50 hover:border-blue-300 bg-white">
                     <CardHeader>
                       <div className="flex items-center gap-3">
                         <div className="p-2.5 md:p-3 rounded-xl bg-gradient-to-br from-slate-600 to-slate-700 shadow-lg shadow-slate-500/20">
@@ -784,7 +784,7 @@ export default function FollowUpPage() {
                     <CardContent>
                       <div className="grid md:grid-cols-3 gap-4">
                         {salesEmailTemplates.map((template) => (
-                          <div key={template.id} className="p-4 bg-stone-50 rounded-lg border border-slate-200 hover:border-indigo-200 transition-colors">
+                          <div key={template.id} className="p-4 bg-stone-50 rounded-lg border border-slate-200 hover:border-blue-200 transition-colors">
                             <div className="flex items-center justify-between mb-3">
                               <h4 className="font-semibold text-slate-900 text-sm flex items-center gap-2">
                                 <Send className="h-4 w-4 text-slate-600" />
@@ -813,7 +813,7 @@ export default function FollowUpPage() {
                   </Card>
 
                   {/* Follow-Up Cadence - Two Column Layout */}
-                  <Card className="shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-200/50 hover:border-indigo-300 bg-white">
+                  <Card className="shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-200/50 hover:border-blue-300 bg-white">
                     <CardHeader>
                       <div className="flex items-center gap-3">
                         <div className="p-2.5 md:p-3 rounded-xl bg-gradient-to-br from-slate-600 to-slate-700 shadow-lg shadow-slate-500/20">
@@ -828,9 +828,9 @@ export default function FollowUpPage() {
                     <CardContent>
                       <div className="grid md:grid-cols-2 gap-6">
                         {/* Warm Lead Cadence */}
-                        <div className="p-4 bg-indigo-50 rounded-lg border border-indigo-200">
+                        <div className="p-4 bg-blue-50 rounded-lg border border-blue-200">
                           <h4 className="font-semibold text-slate-900 mb-4 flex items-center gap-2">
-                            <Badge className="bg-indigo-100 text-indigo-700 border border-indigo-200">Warm Lead</Badge>
+                            <Badge className="bg-blue-100 text-blue-700 border border-blue-200">Warm Lead</Badge>
                             Post-Discovery
                           </h4>
                           <div className="space-y-3">
@@ -842,7 +842,7 @@ export default function FollowUpPage() {
                               { day: "Day 21", action: "Final 'closing the loop' message" },
                             ].map((item, index) => (
                               <div key={index} className="flex items-start gap-3">
-                                <Badge variant="outline" className="bg-white text-slate-700 border-indigo-300 text-xs flex-shrink-0">{item.day}</Badge>
+                                <Badge variant="outline" className="bg-white text-slate-700 border-blue-300 text-xs flex-shrink-0">{item.day}</Badge>
                                 <p className="text-sm text-slate-700">{item.action}</p>
                               </div>
                             ))}
@@ -883,7 +883,7 @@ export default function FollowUpPage() {
                   <ROICalculator />
 
                   {/* Stakeholder Messaging */}
-                  <Card className="shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-200/50 hover:border-indigo-300 bg-white">
+                  <Card className="shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-200/50 hover:border-blue-300 bg-white">
                     <CardHeader className="pb-4">
                       <div className="flex items-center gap-3">
                         <div className="p-2.5 md:p-3 rounded-xl bg-gradient-to-br from-slate-600 to-slate-700 shadow-lg shadow-slate-500/20">
@@ -923,7 +923,7 @@ export default function FollowUpPage() {
                   </Card>
 
                   {/* Business Case Checklist */}
-                  <Card className="shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-200/50 hover:border-indigo-300 bg-white">
+                  <Card className="shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-200/50 hover:border-blue-300 bg-white">
                     <CardHeader className="pb-4">
                       <div className="flex items-center gap-3">
                         <div className="p-2.5 md:p-3 rounded-xl bg-gradient-to-br from-slate-600 to-slate-700 shadow-lg shadow-slate-500/20">

@@ -39,10 +39,10 @@ export function ImpactDrivers() {
         <div className="mx-auto max-w-[1200px]">
           {/* Section Header */}
           <div className="text-center mb-4 md:mb-6">
-            <div className="inline-flex items-center gap-2 rounded-full bg-indigo-100 px-4 py-1.5 text-sm font-medium text-indigo-700 mb-4">
+            <div className="inline-flex items-center gap-2 rounded-full bg-blue-100 px-4 py-1.5 text-sm font-medium text-blue-700 mb-4">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-500 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-500 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
               </span>
               Competitive Advantage
             </div>
@@ -67,12 +67,12 @@ export function ImpactDrivers() {
                 <Card className="h-full group shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-200/50 hover:border-slate-400 bg-white">
                   <CardHeader>
                     <div className="flex items-center gap-3 mb-3">
-                      <div className="p-2 md:p-3 rounded-xl bg-gradient-to-br from-indigo-500 to-indigo-600 group-hover:scale-110 transition-transform shadow-lg shadow-indigo-500/20">
+                      <div className="p-2 md:p-3 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 group-hover:scale-110 transition-transform shadow-lg shadow-blue-500/20">
                         <driver.icon className="h-5 w-5 md:h-6 md:w-6 text-white" />
                       </div>
                     </div>
-                    <CardTitle className="text-lg md:text-xl mb-2 text-stone-900 group-hover:text-indigo-600 transition-colors">{driver.title}</CardTitle>
-                    <Badge variant="secondary" className="w-fit text-xs bg-indigo-100 text-indigo-700 border-indigo-200 font-semibold mb-3">
+                    <CardTitle className="text-lg md:text-xl mb-2 text-stone-900 group-hover:text-blue-600 transition-colors">{driver.title}</CardTitle>
+                    <Badge variant="secondary" className="w-fit text-xs bg-blue-100 text-blue-700 border-blue-200 font-semibold mb-3">
                       {driver.subtitle}
                     </Badge>
                   </CardHeader>

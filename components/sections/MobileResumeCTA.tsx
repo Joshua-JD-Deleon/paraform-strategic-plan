@@ -20,7 +20,7 @@ export function MobileResumeCTA() {
       <Button
         onClick={handleDownload}
         size="lg"
-        className="w-full bg-indigo-500 text-white hover:bg-indigo-600 shadow-xl hover:shadow-2xl transition-all font-semibold text-base py-6"
+        className="w-full bg-blue-500 text-white hover:bg-blue-600 shadow-xl hover:shadow-2xl transition-all font-semibold text-base py-6"
       >
         <Download className="h-5 w-5 mr-2" />
         Download Resume

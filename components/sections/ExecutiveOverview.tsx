@@ -15,14 +15,14 @@ export function ExecutiveOverview() {
           {/* Section Header */}
           <div className="mb-4 md:mb-6 text-center">
             <motion.div
-              className="inline-flex items-center gap-2 rounded-full bg-indigo-100 px-4 py-1.5 text-sm font-medium text-indigo-700 mb-4"
+              className="inline-flex items-center gap-2 rounded-full bg-blue-100 px-4 py-1.5 text-sm font-medium text-blue-700 mb-4"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.3, ease: "backOut" }}
             >
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-500 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-500 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
               </span>
               Strategic Summary
             </motion.div>
@@ -40,7 +40,7 @@ export function ExecutiveOverview() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.4, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
             >
-              Full-cycle new business development framework for founding sales role
+              Strategic approach to recruiter success and marketplace growth
             </motion.p>
           </div>
 
@@ -61,7 +61,7 @@ export function ExecutiveOverview() {
                   >
                     <p className="text-xs font-semibold text-slate-600 uppercase tracking-wide mb-2">Value Proposition</p>
                     <p className="text-sm md:text-base text-stone-700 leading-relaxed">
-                      Enterprise sales professional with $7.5M+ closed revenue across AI-powered SaaS, specializing in transforming early markets into high-growth engines. Proven track record in full-cycle enterprise sales, complex deal execution, and GTM strategy development, including partnering with founders to build sales playbooks. Experienced in MEDDICC methodology, multi-stakeholder orchestration, and AI-augmented sales tech stack optimization.
+                      Revenue leader with $8M+ closed across AI-powered SaaS and strategic services, specializing in building enterprise relationships and scaling cold-start markets. Proven track record in multi-stakeholder pipeline generation, GTM execution, and cross-functional alignment. Expert in MEDDICC methodology, consultative selling, and advising on strategy, market positioning, and buyer insights to drive growth.
                     </p>
                   </motion.div>
 
@@ -72,9 +72,9 @@ export function ExecutiveOverview() {
                     animate={isInView ? { opacity: 1 } : {}}
                     transition={{ duration: 0.5, delay: 0.7 }}
                   >
-                    <p className="text-xs font-semibold text-slate-600 uppercase tracking-wide mb-2">Why Arphie</p>
+                    <p className="text-xs font-semibold text-slate-600 uppercase tracking-wide mb-2">Why Paraform</p>
                     <p className="text-sm md:text-base text-stone-700 leading-relaxed">
-                      AI + enterprise sales + founding role = ideal opportunity to drive measurable revenue impact and long-term growth. Arphie solves a pain I've seen firsthand: RFP response cycles that drain sales capacity. Excited to translate that into pipeline.
+                      Marketplace dynamics + relationship building + revenue impact = ideal opportunity to drive measurable GMV growth. Paraform's two-sided model aligns with my experience building enterprise relationships and scaling cold-start markets. Excited to help recruiters succeed and accelerate marketplace liquidity.
                     </p>
                   </motion.div>
 

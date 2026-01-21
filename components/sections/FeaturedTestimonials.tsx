@@ -35,10 +35,10 @@ export function FeaturedTestimonials() {
         <div className="mx-auto max-w-[1200px]">
           {/* Section Header */}
           <div className="mb-4 md:mb-6 text-center">
-            <div className="inline-flex items-center gap-2 rounded-full bg-indigo-100 px-4 py-1.5 text-sm font-medium text-indigo-700 mb-4">
+            <div className="inline-flex items-center gap-2 rounded-full bg-blue-100 px-4 py-1.5 text-sm font-medium text-blue-700 mb-4">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-500 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-500 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
               </span>
               Featured Recommendations
             </div>
@@ -62,7 +62,7 @@ export function FeaturedTestimonials() {
               >
                 <Card className="h-full border border-slate-200/50 hover:border-slate-400 shadow-sm hover:shadow-lg transition-all duration-300 bg-white">
                   <CardContent className="pt-6 pb-6 flex flex-col h-full">
-                    <Quote className="h-8 w-8 text-indigo-500 mb-4 opacity-50" />
+                    <Quote className="h-8 w-8 text-blue-500 mb-4 opacity-50" />
                     <blockquote className="text-sm md:text-base text-stone-700 leading-relaxed mb-6 flex-grow">
                       "{testimonial.quote}"
                     </blockquote>

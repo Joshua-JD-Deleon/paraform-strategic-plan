@@ -56,7 +56,7 @@ export function Navigation() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.4 }}
           >
-            <Link href="/" className="flex items-center text-white font-semibold hover:text-indigo-300 transition-colors">
+            <Link href="/" className="flex items-center text-white font-semibold hover:text-blue-300 transition-colors">
               <span>JD Deleon</span>
               <span className="ml-2 text-sm text-slate-400 hidden sm:inline">| Strategic Plans</span>
             </Link>
@@ -74,7 +74,7 @@ export function Navigation() {
               size="sm"
               className={`h-7 px-2 text-xs ${
                 isHomePage
-                  ? "bg-indigo-600 text-white hover:bg-indigo-500"
+                  ? "bg-blue-600 text-white hover:bg-blue-500"
                   : "bg-transparent text-slate-300 hover:text-white hover:bg-slate-800"
               }`}
             >
@@ -88,7 +88,7 @@ export function Navigation() {
               size="sm"
               className={`h-7 px-2 text-xs ${
                 isCaseStudy
-                  ? "bg-indigo-600 text-white hover:bg-indigo-500"
+                  ? "bg-blue-600 text-white hover:bg-blue-500"
                   : "bg-transparent text-slate-300 hover:text-white hover:bg-slate-800"
               }`}
             >
@@ -102,7 +102,7 @@ export function Navigation() {
               size="sm"
               className={`h-7 px-2 text-xs ${
                 isInterviewFollowUp
-                  ? "bg-indigo-600 text-white hover:bg-indigo-500"
+                  ? "bg-blue-600 text-white hover:bg-blue-500"
                   : "bg-transparent text-slate-300 hover:text-white hover:bg-slate-800"
               }`}
             >

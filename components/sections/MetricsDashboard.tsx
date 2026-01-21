@@ -7,7 +7,7 @@ import { DollarSign, Building2, TrendingUp, Target } from "lucide-react";
 const metrics = [
   {
     label: "Revenue Closed",
-    value: "$7.5M+",
+    value: "$8M+",
     icon: DollarSign,
     description: "Total closed B2B revenue",
   },
@@ -33,15 +33,15 @@ const metrics = [
 
 export function MetricsDashboard() {
   return (
-    <section className="py-6 md:py-10 bg-gradient-to-br from-stone-50 to-indigo-50/30">
+    <section className="py-6 md:py-10 bg-gradient-to-br from-stone-50 to-blue-50/30">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="mx-auto max-w-[1200px]">
           {/* Section Header */}
           <div className="mb-4 md:mb-6 text-center">
-            <div className="inline-flex items-center gap-2 rounded-full bg-indigo-100 px-4 py-1.5 text-sm font-medium text-indigo-600 mb-4">
+            <div className="inline-flex items-center gap-2 rounded-full bg-blue-100 px-4 py-1.5 text-sm font-medium text-blue-600 mb-4">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-500 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-500 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
               </span>
               Performance Metrics
             </div>
@@ -66,12 +66,12 @@ export function MetricsDashboard() {
                     <CardContent className="pt-6 pb-6">
                       <div className="flex flex-col items-center text-center space-y-3">
                         {/* Icon */}
-                        <div className="p-3 rounded-full bg-indigo-100 group-hover:bg-indigo-500 transition-colors duration-300">
-                          <Icon className="h-6 w-6 text-indigo-600 group-hover:text-white transition-colors duration-300" />
+                        <div className="p-3 rounded-full bg-blue-100 group-hover:bg-blue-500 transition-colors duration-300">
+                          <Icon className="h-6 w-6 text-blue-600 group-hover:text-white transition-colors duration-300" />
                         </div>
 
                         {/* Value */}
-                        <div className="text-4xl font-bold text-stone-900 group-hover:text-indigo-600 transition-colors duration-300">
+                        <div className="text-4xl font-bold text-stone-900 group-hover:text-blue-600 transition-colors duration-300">
                           {metric.value}
                         </div>
 

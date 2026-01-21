@@ -22,8 +22,8 @@ const skillsData = [
   {
     category: "Technical Sales Excellence",
     icon: Target,
-    color: "text-indigo-600",
-    bgColor: "bg-indigo-100",
+    color: "text-blue-600",
+    bgColor: "bg-blue-100",
     skills: [
       "DevOps & CI/CD Platforms",
       "Cloud Infrastructure (AWS, GCP, Azure)",
@@ -36,8 +36,8 @@ const skillsData = [
   {
     category: "Enterprise Sales Methodology",
     icon: TrendingUp,
-    color: "text-indigo-600",
-    bgColor: "bg-indigo-100",
+    color: "text-blue-600",
+    bgColor: "bg-blue-100",
     skills: [
       "Multi-threaded Enterprise Selling",
       "MEDDPICC & Command of the Message",
@@ -50,8 +50,8 @@ const skillsData = [
   {
     category: "Relationship Building",
     icon: Users,
-    color: "text-indigo-600",
-    bgColor: "bg-indigo-100",
+    color: "text-blue-600",
+    bgColor: "bg-blue-100",
     skills: [
       "C-Level Executive Engagement",
       "Engineering Leadership Credibility",
@@ -64,8 +64,8 @@ const skillsData = [
   {
     category: "Strategic Thinking",
     icon: Lightbulb,
-    color: "text-indigo-600",
-    bgColor: "bg-indigo-100",
+    color: "text-blue-600",
+    bgColor: "bg-blue-100",
     skills: [
       "Market & Competitive Intelligence",
       "ICP Definition & Segmentation",
@@ -78,8 +78,8 @@ const skillsData = [
   {
     category: "Communication & Influence",
     icon: MessageSquare,
-    color: "text-indigo-600",
-    bgColor: "bg-indigo-100",
+    color: "text-blue-600",
+    bgColor: "bg-blue-100",
     skills: [
       "Executive Presentations & Demos",
       "Technical to Business Translation",
@@ -92,8 +92,8 @@ const skillsData = [
   {
     category: "Execution & Results",
     icon: Zap,
-    color: "text-indigo-600",
-    bgColor: "bg-indigo-100",
+    color: "text-blue-600",
+    bgColor: "bg-blue-100",
     skills: [
       "Consistent Quota Attainment (120%+)",
       "Pipeline Generation & Management",
@@ -135,10 +135,10 @@ export function Skills() {
         <div className="mx-auto max-w-[1200px]">
           {/* Section Header */}
           <div className="text-center mb-4 md:mb-6">
-            <div className="inline-flex items-center gap-2 rounded-full bg-indigo-100 px-4 py-1.5 text-sm font-medium text-indigo-600 mb-4">
+            <div className="inline-flex items-center gap-2 rounded-full bg-blue-100 px-4 py-1.5 text-sm font-medium text-blue-600 mb-4">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-500 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-500 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
               </span>
               Core Competencies
             </div>
@@ -163,8 +163,8 @@ export function Skills() {
                 <Card className="h-full border border-slate-200/50 hover:border-slate-400 shadow-sm hover:shadow-lg transition-all duration-300 bg-white">
                   <CardHeader className="pb-3">
                     <div className="flex items-center gap-3 mb-2">
-                      <div className="p-2 rounded-lg bg-indigo-100">
-                        <strength.icon className="h-5 w-5 text-indigo-600" />
+                      <div className="p-2 rounded-lg bg-blue-100">
+                        <strength.icon className="h-5 w-5 text-blue-600" />
                       </div>
                     </div>
                     <CardTitle className="text-lg text-stone-900">{strength.title}</CardTitle>
@@ -189,89 +189,89 @@ export function Skills() {
                   <Card className="text-center border border-slate-200/50 hover:border-slate-400 shadow-sm hover:shadow-lg transition-all duration-300 bg-white">
                     <CardContent className="pt-4 pb-4">
                       <div className="flex justify-center mb-2">
-                        <div className="p-2 rounded-lg bg-indigo-100">
-                          <Database className="h-4 w-4 text-indigo-600" />
+                        <div className="p-2 rounded-lg bg-blue-100">
+                          <Database className="h-4 w-4 text-blue-600" />
                         </div>
                       </div>
                       <p className="text-xs font-semibold text-stone-900 mb-1">CPG & Food</p>
-                      <Badge className="bg-indigo-600 text-white text-xs font-bold">$1.1M</Badge>
+                      <Badge className="bg-blue-600 text-white text-xs font-bold">$1.1M</Badge>
                     </CardContent>
                   </Card>
                   <Card className="text-center border border-slate-200/50 hover:border-slate-400 shadow-sm hover:shadow-lg transition-all duration-300 bg-white">
                     <CardContent className="pt-4 pb-4">
                       <div className="flex justify-center mb-2">
-                        <div className="p-2 rounded-lg bg-indigo-100">
-                          <Shield className="h-4 w-4 text-indigo-600" />
+                        <div className="p-2 rounded-lg bg-blue-100">
+                          <Shield className="h-4 w-4 text-blue-600" />
                         </div>
                       </div>
                       <p className="text-xs font-semibold text-stone-900 mb-1">Healthcare & Life Sciences</p>
-                      <Badge className="bg-indigo-600 text-white text-xs font-bold">$900K</Badge>
+                      <Badge className="bg-blue-600 text-white text-xs font-bold">$900K</Badge>
                     </CardContent>
                   </Card>
                   <Card className="text-center border border-slate-200/50 hover:border-slate-400 shadow-sm hover:shadow-lg transition-all duration-300 bg-white">
                     <CardContent className="pt-4 pb-4">
                       <div className="flex justify-center mb-2">
-                        <div className="p-2 rounded-lg bg-indigo-100">
-                          <Cpu className="h-4 w-4 text-indigo-600" />
+                        <div className="p-2 rounded-lg bg-blue-100">
+                          <Cpu className="h-4 w-4 text-blue-600" />
                         </div>
                       </div>
                       <p className="text-xs font-semibold text-stone-900 mb-1">AgTech & Manufacturing</p>
-                      <Badge className="bg-indigo-600 text-white text-xs font-bold">$600K</Badge>
+                      <Badge className="bg-blue-600 text-white text-xs font-bold">$600K</Badge>
                     </CardContent>
                   </Card>
                   <Card className="text-center border border-slate-200/50 hover:border-slate-400 shadow-sm hover:shadow-lg transition-all duration-300 bg-white">
                     <CardContent className="pt-4 pb-4">
                       <div className="flex justify-center mb-2">
-                        <div className="p-2 rounded-lg bg-indigo-100">
-                          <TrendingUp className="h-4 w-4 text-indigo-600" />
+                        <div className="p-2 rounded-lg bg-blue-100">
+                          <TrendingUp className="h-4 w-4 text-blue-600" />
                         </div>
                       </div>
                       <p className="text-xs font-semibold text-stone-900 mb-1">Financial Services</p>
-                      <Badge className="bg-indigo-600 text-white text-xs font-bold">$480K</Badge>
+                      <Badge className="bg-blue-600 text-white text-xs font-bold">$480K</Badge>
                     </CardContent>
                   </Card>
                   <Card className="text-center border border-slate-200/50 hover:border-slate-400 shadow-sm hover:shadow-lg transition-all duration-300 bg-white">
                     <CardContent className="pt-4 pb-4">
                       <div className="flex justify-center mb-2">
-                        <div className="p-2 rounded-lg bg-indigo-100">
-                          <Code className="h-4 w-4 text-indigo-600" />
+                        <div className="p-2 rounded-lg bg-blue-100">
+                          <Code className="h-4 w-4 text-blue-600" />
                         </div>
                       </div>
                       <p className="text-xs font-semibold text-stone-900 mb-1">Enterprise Technology</p>
-                      <Badge className="bg-indigo-600 text-white text-xs font-bold">$400K</Badge>
+                      <Badge className="bg-blue-600 text-white text-xs font-bold">$400K</Badge>
                     </CardContent>
                   </Card>
                   <Card className="text-center border border-slate-200/50 hover:border-slate-400 shadow-sm hover:shadow-lg transition-all duration-300 bg-white">
                     <CardContent className="pt-4 pb-4">
                       <div className="flex justify-center mb-2">
-                        <div className="p-2 rounded-lg bg-indigo-100">
-                          <Database className="h-4 w-4 text-indigo-600" />
+                        <div className="p-2 rounded-lg bg-blue-100">
+                          <Database className="h-4 w-4 text-blue-600" />
                         </div>
                       </div>
                       <p className="text-xs font-semibold text-stone-900 mb-1">Retail & Foodservice</p>
-                      <Badge className="bg-indigo-600 text-white text-xs font-bold">$220K</Badge>
+                      <Badge className="bg-blue-600 text-white text-xs font-bold">$220K</Badge>
                     </CardContent>
                   </Card>
                   <Card className="text-center border border-slate-200/50 hover:border-slate-400 shadow-sm hover:shadow-lg transition-all duration-300 bg-white">
                     <CardContent className="pt-4 pb-4">
                       <div className="flex justify-center mb-2">
-                        <div className="p-2 rounded-lg bg-indigo-100">
-                          <Shield className="h-4 w-4 text-indigo-600" />
+                        <div className="p-2 rounded-lg bg-blue-100">
+                          <Shield className="h-4 w-4 text-blue-600" />
                         </div>
                       </div>
                       <p className="text-xs font-semibold text-stone-900 mb-1">Legal Services</p>
-                      <Badge className="bg-indigo-600 text-white text-xs font-bold">$180K</Badge>
+                      <Badge className="bg-blue-600 text-white text-xs font-bold">$180K</Badge>
                     </CardContent>
                   </Card>
                   <Card className="text-center border border-slate-200/50 hover:border-slate-400 shadow-sm hover:shadow-lg transition-all duration-300 bg-white">
                     <CardContent className="pt-4 pb-4">
                       <div className="flex justify-center mb-2">
-                        <div className="p-2 rounded-lg bg-indigo-100">
-                          <Users className="h-4 w-4 text-indigo-600" />
+                        <div className="p-2 rounded-lg bg-blue-100">
+                          <Users className="h-4 w-4 text-blue-600" />
                         </div>
                       </div>
                       <p className="text-xs font-semibold text-stone-900 mb-1">Nonprofit</p>
-                      <Badge className="bg-indigo-600 text-white text-xs font-bold">Multi-deal</Badge>
+                      <Badge className="bg-blue-600 text-white text-xs font-bold">Multi-deal</Badge>
                     </CardContent>
                   </Card>
                 </div>
@@ -366,7 +366,7 @@ export function Skills() {
                         <Badge
                           key={skill}
                           variant="secondary"
-                          className="text-xs font-normal bg-stone-100 text-stone-700 hover:bg-indigo-100 hover:text-indigo-700 transition-colors border-stone-200"
+                          className="text-xs font-normal bg-stone-100 text-stone-700 hover:bg-blue-100 hover:text-blue-700 transition-colors border-stone-200"
                         >
                           {skill}
                         </Badge>

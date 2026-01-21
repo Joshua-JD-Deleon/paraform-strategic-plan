@@ -42,14 +42,14 @@ export function FrameworkShowcase() {
           {/* Section Header */}
           <div className="text-center mb-4 md:mb-6">
             <motion.div
-              className="inline-flex items-center gap-2 rounded-full bg-indigo-100 px-4 py-1.5 text-sm font-medium text-indigo-700 mb-4"
+              className="inline-flex items-center gap-2 rounded-full bg-blue-100 px-4 py-1.5 text-sm font-medium text-blue-700 mb-4"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.3 }}
             >
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-500 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-500 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
               </span>
               Account Manager Framework
             </motion.div>
@@ -87,8 +87,8 @@ export function FrameworkShowcase() {
                 <Card
                   className={`group cursor-pointer transition-all duration-300 border bg-white ${
                     expandedSection === section.id
-                      ? "border-indigo-400 shadow-lg"
-                      : "border-slate-200/50 hover:border-indigo-300 shadow-sm"
+                      ? "border-blue-400 shadow-lg"
+                      : "border-slate-200/50 hover:border-blue-300 shadow-sm"
                   }`}
                   onMouseEnter={() => setExpandedSection(section.id)}
                   onMouseLeave={() => setExpandedSection(null)}
@@ -128,7 +128,7 @@ export function FrameworkShowcase() {
                         className="shrink-0"
                       >
                         <ChevronDown className={`h-6 w-6 transition-colors ${
-                          expandedSection === section.id ? 'text-indigo-500' : 'text-slate-400'
+                          expandedSection === section.id ? 'text-blue-500' : 'text-slate-400'
                         }`} />
                       </motion.div>
                     </div>

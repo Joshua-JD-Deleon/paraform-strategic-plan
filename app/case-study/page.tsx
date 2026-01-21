@@ -278,7 +278,7 @@ function HeroSection() {
       {!prefersReducedMotion && (
         <>
           <motion.div
-            className="absolute top-1/4 left-1/4 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl"
+            className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"
             animate={{
               scale: [1, 1.2, 1],
               opacity: [0.3, 0.5, 0.3],
@@ -290,7 +290,7 @@ function HeroSection() {
             }}
           />
           <motion.div
-            className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-indigo-400/10 rounded-full blur-3xl"
+            className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl"
             animate={{
               scale: [1.2, 1, 1.2],
               opacity: [0.3, 0.5, 0.3],
@@ -313,7 +313,7 @@ function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <span className="bg-gradient-to-r from-white via-indigo-100 to-indigo-200 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-white via-blue-100 to-blue-200 bg-clip-text text-transparent">
               Marketplace Growth Strategy
             </span>
           </motion.h1>
@@ -352,14 +352,14 @@ function PhilosophySection() {
         <div className="mx-auto max-w-[1200px]">
           <div className="text-center mb-4 md:mb-6">
             <motion.div
-              className="inline-flex items-center gap-2 rounded-full bg-indigo-100 px-4 py-1.5 text-sm font-medium text-indigo-700 mb-4"
+              className="inline-flex items-center gap-2 rounded-full bg-blue-100 px-4 py-1.5 text-sm font-medium text-blue-700 mb-4"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.3 }}
             >
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-500 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-500 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
               </span>
               My Approach
             </motion.div>
@@ -429,7 +429,7 @@ function AccountCard({ account }: { account: typeof demandAccounts[0] }) {
       }}
       transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
     >
-      <Card className="overflow-hidden group shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/50 hover:border-indigo-300 bg-white">
+      <Card className="overflow-hidden group shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/50 hover:border-blue-300 bg-white">
         <CardHeader className="bg-gradient-to-r from-stone-50 to-white">
           <div className="flex items-start justify-between gap-4">
             <div className="flex items-start gap-3">
@@ -442,7 +442,7 @@ function AccountCard({ account }: { account: typeof demandAccounts[0] }) {
               </div>
             </div>
             <div className="flex flex-col gap-2 items-end">
-              <Badge className={account.tier === "Tier 1" ? "bg-indigo-600 text-white border-0" : "bg-slate-600 text-white border-0"}>
+              <Badge className={account.tier === "Tier 1" ? "bg-blue-600 text-white border-0" : "bg-slate-600 text-white border-0"}>
                 {account.tier}
               </Badge>
               <Badge className={isDemand ? "bg-blue-100 text-blue-700 border-blue-200" : "bg-emerald-100 text-emerald-700 border-emerald-200"}>
@@ -485,7 +485,7 @@ function AccountCard({ account }: { account: typeof demandAccounts[0] }) {
             </Badge>
             <div className="grid md:grid-cols-2 gap-3">
               {account.contacts.map((contact, idx) => (
-                <div key={idx} className="bg-stone-50 rounded-lg p-4 border border-stone-100 hover:border-indigo-200 transition-colors">
+                <div key={idx} className="bg-stone-50 rounded-lg p-4 border border-stone-100 hover:border-blue-200 transition-colors">
                   <p className="font-medium text-stone-900 text-sm">{contact.name}</p>
                   <p className="text-xs text-stone-500 mb-2">{contact.title}</p>
                   <p className="text-xs text-stone-500 italic leading-relaxed">{contact.approach}</p>
@@ -517,7 +517,7 @@ function AccountCard({ account }: { account: typeof demandAccounts[0] }) {
               <div>
                 <div className="flex items-center gap-2 mb-2">
                   <p className="text-xs font-semibold text-slate-600 uppercase tracking-wide">Outreach Sequence</p>
-                  <Badge variant="secondary" className="text-xs bg-indigo-50 text-indigo-700 border-indigo-200">
+                  <Badge variant="secondary" className="text-xs bg-blue-50 text-blue-700 border-blue-200">
                     {account.outreach.sequenceLabel}
                   </Badge>
                 </div>
@@ -538,7 +538,7 @@ function AccountCard({ account }: { account: typeof demandAccounts[0] }) {
                           <td className="px-3 py-2 text-stone-600">{step.step}</td>
                           <td className="px-3 py-2">
                             <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium ${
-                              step.channel === "LinkedIn" ? "bg-indigo-100 text-indigo-700" :
+                              step.channel === "LinkedIn" ? "bg-blue-100 text-blue-700" :
                               step.channel === "Email" ? "bg-green-100 text-green-700" :
                               "bg-orange-100 text-orange-700"
                             }`}>
@@ -685,14 +685,14 @@ function AIDisclosure() {
             transition={{ duration: 0.5 }}
           >
             <div className="flex items-center justify-center gap-2 mb-4">
-              <Clock className="h-5 w-5 text-indigo-400" />
+              <Clock className="h-5 w-5 text-blue-400" />
               <span className="text-slate-300 text-sm">Research completed in under 1 hour</span>
             </div>
             <Card className="bg-slate-700/50 border-slate-600">
               <CardContent className="p-6">
                 <h3 className="text-lg font-semibold text-white mb-3 text-center">A Note on AI Usage</h3>
                 <p className="text-slate-300 text-sm leading-relaxed">
-                  I used AI tools as a <span className="text-indigo-400 font-medium">research accelerant</span> for this case study - specifically for rapid company research, market analysis, and formatting. The strategic thinking, account selection rationale, marketplace dynamics understanding, and outreach approach are entirely my own methodology, developed through years of account management and business development experience.
+                  I used AI tools as a <span className="text-blue-400 font-medium">research accelerant</span> for this case study - specifically for rapid company research, market analysis, and formatting. The strategic thinking, account selection rationale, marketplace dynamics understanding, and outreach approach are entirely my own methodology, developed through years of account management and business development experience.
                 </p>
               </CardContent>
             </Card>

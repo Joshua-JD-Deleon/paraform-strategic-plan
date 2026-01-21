@@ -217,10 +217,41 @@ export const arpTheme: BrandTheme = {
 };
 
 /**
+ * Company-Specific Theme: Paraform
+ * Two-sided recruiting marketplace - Account Manager role
+ */
+export const paraformTheme: BrandTheme = {
+  name: "Paraform",
+  description: "Paraform recruiting marketplace theme - Cornflower Blue with yellow accent",
+  colors: {
+    primary: "#5074F6", // Cornflower Blue
+    primaryLight: "#7B9AF8",
+    primaryDark: "#3D5BD9",
+    accent: "#DCEA22", // Barberry Yellow
+    accentLight: "#E8F24D",
+    text: "#1A1A1A", // Cod Gray
+  },
+  meta: {
+    title: "Strategic 30-60-90 Day Action Plan | Account Manager - Joshua Deleon",
+    description: "Strategic 30-60-90 Day Action Plan for Paraform Account Manager. Recruiter success, GMV growth, and marketplace operations expertise with $8M+ closed revenue.",
+    companyName: "Paraform",
+    roleName: "Account Manager",
+  },
+  hero: {
+    title: "30-60-90 Day Strategic Framework",
+    subtitle: "Supply-Side Growth | Recruiter Success | Marketplace Operations",
+    roleTitle: "Account Manager • Paraform",
+  },
+  navigation: {
+    brand: "JD • Paraform",
+  },
+};
+
+/**
  * Active Theme Configuration
  * Change this to switch between themes
  */
-export const activeTheme: BrandTheme = arpTheme;
+export const activeTheme: BrandTheme = paraformTheme;
 
 /**
  * Available Themes Export
@@ -233,4 +264,5 @@ export const availableThemes = {
   growthGreen: growthGreenTheme,
   hgInsights: hgInsightsTheme,
   arp: arpTheme,
+  paraform: paraformTheme,
 };

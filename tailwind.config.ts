@@ -114,18 +114,28 @@ const config: Config = {
   				'800': '#292524',
   				'900': '#1c1917'
   			},
+  			// Paraform Brand Colors
+  			paraform: {
+  				blue: '#5074F6',
+  				'blue-light': '#7B9AF8',
+  				'blue-dark': '#3D5BD9',
+  				snow: '#F5F8F6',
+  				gray: '#1A1A1A',
+  				yellow: '#DCEA22',
+  				purple: '#8B5CF6',
+  			},
   			brand: {
-  				primary: '#3b82f6',
-  				accent: '#3b82f6',
-  				dark: '#2563eb',
-  				'dark-secondary': '#1e40af',
-  				light: '#60a5fa',
-  				text: '#475569'
+  				primary: '#5074F6',
+  				accent: '#DCEA22',
+  				dark: '#3D5BD9',
+  				'dark-secondary': '#2D4BC9',
+  				light: '#7B9AF8',
+  				text: '#1A1A1A'
   			},
   			phase: {
-  				'30': '#3b82f6',
-  				'60': '#60a5fa',
-  				'90': '#2563eb'
+  				'30': '#5074F6',
+  				'60': '#7B9AF8',
+  				'90': '#3D5BD9'
   			},
   			border: 'hsl(var(--border))',
   			input: 'hsl(var(--input))',

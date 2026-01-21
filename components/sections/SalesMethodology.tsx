@@ -16,33 +16,33 @@ import {
 const methodologies = [
   {
     icon: TrendingUp,
-    title: "Full-Cycle Sales",
-    description: "End-to-end deal ownership from prospecting to close, running enterprise sales cycles with founder-level gravitas",
+    title: "Portfolio Growth",
+    description: "Driving GMV growth across assigned recruiter portfolio through strategic guidance, workflow optimization, and personalized success planning",
   },
   {
     icon: Target,
-    title: "Pipeline Generation",
-    description: "Systematic outbound execution, multi-channel prospecting, conference activation, and inbound qualification",
+    title: "Relationship Management",
+    description: "Building trusted advisor relationships with recruiters, establishing regular cadence, and delivering consistent value through 1:1 engagement",
   },
   {
     icon: Lightbulb,
-    title: "MEDDICC Qualification",
-    description: "Rigorous qualification methodology, stakeholder mapping, quantified business cases, and decision alignment",
+    title: "Strategic Advisory",
+    description: "Consultative approach to understand recruiter goals, identify growth opportunities, and deliver actionable recommendations",
   },
   {
     icon: Presentation,
-    title: "Discovery & Demo Excellence",
-    description: "Consultative discovery uncovering pain points, tailored product demos, and proof-of-concept execution",
+    title: "Marketplace Operations",
+    description: "Understanding supply-demand dynamics, optimizing liquidity, and running experiments to improve marketplace performance",
   },
   {
     icon: Settings,
-    title: "GTM Systems Expertise",
-    description: "Modern GTM tech stack proficiency, workflow automation, AI-augmented tooling, and CRM discipline",
+    title: "Data-Driven Insights",
+    description: "Leveraging health metrics, engagement scoring, and performance data to prioritize interventions and measure impact",
   },
   {
     icon: BookOpen,
-    title: "Sales Process Development",
-    description: "Building repeatable playbooks, documenting best practices, and establishing sales foundations for scale",
+    title: "Playbook Development",
+    description: "Building repeatable success patterns, documenting best practices, and codifying learnings for team-wide adoption",
   },
 ];
 
@@ -73,14 +73,14 @@ export function SalesMethodology() {
           {/* Section Header */}
           <div className="text-center mb-4 md:mb-6">
             <motion.div
-              className="inline-flex items-center gap-2 rounded-full bg-indigo-100 px-4 py-1.5 text-sm font-medium text-indigo-700 mb-4"
+              className="inline-flex items-center gap-2 rounded-full bg-blue-100 px-4 py-1.5 text-sm font-medium text-blue-700 mb-4"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.3 }}
             >
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-500 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-500 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
               </span>
               Core Expertise
             </motion.div>
@@ -90,7 +90,7 @@ export function SalesMethodology() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.4, delay: 0.1 }}
             >
-              Core Sales Expertise
+              Core Account Management Expertise
             </motion.h2>
             <motion.p
               className="text-base md:text-lg text-stone-600"
@@ -98,7 +98,7 @@ export function SalesMethodology() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.4, delay: 0.15 }}
             >
-              Proven frameworks for new logo acquisition and sales process excellence
+              Proven frameworks for recruiter success and marketplace growth
             </motion.p>
           </div>
 
@@ -149,8 +149,8 @@ export function SalesMethodology() {
             <Card className="inline-block shadow-sm border border-slate-200/50 bg-gradient-to-r from-slate-50 to-stone-50 rounded-2xl">
               <CardContent className="py-4 px-6">
                 <p className="text-xs md:text-sm text-stone-700">
-                  <span className="font-semibold text-indigo-600">Sales Excellence Standard:</span>{" "}
-                  Full-cycle ownership | Pipeline-to-close execution | Sales process builder
+                  <span className="font-semibold text-blue-600">Account Management Standard:</span>{" "}
+                  Recruiter success ownership | GMV growth execution | Operational excellence builder
                 </p>
               </CardContent>
             </Card>

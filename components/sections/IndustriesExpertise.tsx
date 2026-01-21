@@ -147,10 +147,10 @@ export function IndustriesExpertise() {
         <div className="mx-auto max-w-[1200px]">
           {/* Section Header */}
           <div className="text-center mb-4 md:mb-6">
-            <div className="inline-flex items-center gap-2 rounded-full bg-indigo-100 px-4 py-1.5 text-sm font-medium text-indigo-600 mb-4">
+            <div className="inline-flex items-center gap-2 rounded-full bg-blue-100 px-4 py-1.5 text-sm font-medium text-blue-600 mb-4">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-500 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-500 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
               </span>
               Proven Track Record
             </div>
@@ -175,11 +175,11 @@ export function IndustriesExpertise() {
                 <Card className="text-center border border-slate-200/50 hover:border-slate-400 shadow-sm hover:shadow-lg transition-all duration-300 bg-gradient-to-br from-white to-stone-50">
                   <CardContent className="pt-6">
                     <div className="flex justify-center mb-2">
-                      <div className="p-2 rounded-lg bg-indigo-100">
-                        <metric.icon className="h-5 w-5 text-indigo-600" />
+                      <div className="p-2 rounded-lg bg-blue-100">
+                        <metric.icon className="h-5 w-5 text-blue-600" />
                       </div>
                     </div>
-                    <p className="text-2xl font-bold text-indigo-600 mb-1">{metric.value}</p>
+                    <p className="text-2xl font-bold text-blue-600 mb-1">{metric.value}</p>
                     <p className="text-xs text-stone-600 font-medium">{metric.label}</p>
                     {metric.subtitle && (
                       <p className="text-xs text-stone-500 mt-1 italic">{metric.subtitle}</p>
@@ -207,11 +207,11 @@ export function IndustriesExpertise() {
                   <Card className="h-full group border border-slate-200/50 hover:border-slate-400 shadow-sm hover:shadow-lg transition-all duration-300 bg-gradient-to-br from-white to-stone-50">
                     <CardHeader>
                       <div className="flex items-center gap-3 mb-3">
-                        <div className="p-3 rounded-xl bg-gradient-to-br from-indigo-500 to-indigo-600 group-hover:scale-110 transition-transform shadow-lg shadow-indigo-500/20">
+                        <div className="p-3 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 group-hover:scale-110 transition-transform shadow-lg shadow-blue-500/20">
                           <industry.icon className="h-6 w-6 text-white" />
                         </div>
                       </div>
-                      <CardTitle className="text-xl text-stone-900 group-hover:text-indigo-600 transition-colors">
+                      <CardTitle className="text-xl text-stone-900 group-hover:text-blue-600 transition-colors">
                         {industry.name}
                       </CardTitle>
                     </CardHeader>
@@ -219,13 +219,13 @@ export function IndustriesExpertise() {
                       {/* Deal Highlights */}
                       <div className="mb-4 space-y-2">
                         {industry.deals.map((deal, idx) => (
-                          <div key={idx} className="bg-indigo-50 rounded-lg p-3 border border-indigo-200">
+                          <div key={idx} className="bg-blue-50 rounded-lg p-3 border border-blue-200">
                             <div className="flex items-center gap-2 mb-1">
-                              <Badge className="bg-indigo-600 text-white text-xs font-bold">
+                              <Badge className="bg-blue-600 text-white text-xs font-bold">
                                 {deal.amount}
                               </Badge>
                               {deal.timeline && (
-                                <span className="text-xs text-indigo-700 font-medium">
+                                <span className="text-xs text-blue-700 font-medium">
                                   {deal.timeline}
                                 </span>
                               )}
@@ -273,11 +273,11 @@ export function IndustriesExpertise() {
                   <Card className="h-full group border border-slate-200/50 hover:border-slate-400 shadow-sm hover:shadow-lg transition-all duration-300 bg-gradient-to-br from-white to-stone-50">
                     <CardHeader>
                       <div className="flex items-center gap-3 mb-3">
-                        <div className="p-3 rounded-xl bg-indigo-100 group-hover:scale-110 transition-transform">
-                          <category.icon className="h-6 w-6 text-indigo-600" />
+                        <div className="p-3 rounded-xl bg-blue-100 group-hover:scale-110 transition-transform">
+                          <category.icon className="h-6 w-6 text-blue-600" />
                         </div>
                       </div>
-                      <CardTitle className="text-xl mb-2 text-stone-900 group-hover:text-indigo-600 transition-colors">
+                      <CardTitle className="text-xl mb-2 text-stone-900 group-hover:text-blue-600 transition-colors">
                         {category.category}
                       </CardTitle>
                       <div className="flex gap-2">
@@ -285,7 +285,7 @@ export function IndustriesExpertise() {
                           <Badge
                             key={company}
                             variant="outline"
-                            className="text-xs border-indigo-300 text-indigo-700 font-semibold"
+                            className="text-xs border-blue-300 text-blue-700 font-semibold"
                           >
                             {company}
                           </Badge>
@@ -296,7 +296,7 @@ export function IndustriesExpertise() {
                       <ul className="space-y-2">
                         {category.products.map((product) => (
                           <li key={product} className="flex items-start gap-2">
-                            <CheckCircle2 className="h-4 w-4 text-indigo-500 mt-0.5 flex-shrink-0" />
+                            <CheckCircle2 className="h-4 w-4 text-blue-500 mt-0.5 flex-shrink-0" />
                             <span className="text-sm text-stone-700">{product}</span>
                           </li>
                         ))}
@@ -316,7 +316,7 @@ export function IndustriesExpertise() {
             transition={{ delay: 0.5 }}
             className="mt-12 text-center"
           >
-            <div className="inline-block bg-gradient-to-br from-indigo-50 to-stone-50 rounded-2xl p-8 border-2 border-indigo-200">
+            <div className="inline-block bg-gradient-to-br from-blue-50 to-stone-50 rounded-2xl p-8 border-2 border-blue-200">
               <p className="text-sm text-stone-600 mb-2 font-medium">
                 Cross-Vertical Value Proposition
               </p>
